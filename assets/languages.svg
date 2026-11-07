@@ -15,16 +15,16 @@
 </style>
 <text class="t" x="20" y="28">Languages</text>
 <clipPath id="bar"><rect x="20" y="44" width="720" height="14" rx="7"/></clipPath><g clip-path="url(#bar)">
-<rect x="20" y="44" width="348.731" height="14" fill="#5794F2"/>
-<rect x="367.731" y="44" width="114.775" height="14" fill="#FF9830"/>
-<rect x="481.506" y="44" width="105.786" height="14" fill="#8AB8FF"/>
-<rect x="586.293" y="44" width="82.1303" height="14" fill="#73BF69"/>
-<rect x="667.423" y="44" width="73.5771" height="14" fill="#FADE2A"/>
+<rect x="20" y="44" width="346.751" height="14" fill="#5794F2"/>
+<rect x="365.751" y="44" width="115.381" height="14" fill="#FF9830"/>
+<rect x="480.131" y="44" width="106.344" height="14" fill="#8AB8FF"/>
+<rect x="585.475" y="44" width="82.5618" height="14" fill="#73BF69"/>
+<rect x="667.037" y="44" width="73.9632" height="14" fill="#FADE2A"/>
 </g>
 <circle cx="26" cy="80" r="5" fill="#5794F2"/>
-<text class="l" x="38" y="84">Python <tspan class="m">48.3%</tspan></text>
+<text class="l" x="38" y="84">Python <tspan class="m">48.0%</tspan></text>
 <circle cx="266" cy="80" r="5" fill="#FF9830"/>
-<text class="l" x="278" y="84">HTML <tspan class="m">15.8%</tspan></text>
+<text class="l" x="278" y="84">HTML <tspan class="m">15.9%</tspan></text>
 <circle cx="506" cy="80" r="5" fill="#8AB8FF"/>
 <text class="l" x="518" y="84">CSS <tspan class="m">14.6%</tspan></text>
 <circle cx="26" cy="102" r="5" fill="#73BF69"/>

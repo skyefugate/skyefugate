@@ -17,12 +17,12 @@
 <rect class="card" x="20" y="44" width="168" height="92" rx="8"/>
 <rect x="20" y="44" width="168" height="4" rx="2" fill="#5794F2"/>
 <text class="k" x="36" y="72">CONTRIBUTIONS</text>
-<text x="36" y="106" style="font:700 30px -apple-system,Segoe UI,Helvetica,Arial,sans-serif" fill="#5794F2">52</text>
+<text x="36" y="106" style="font:700 30px -apple-system,Segoe UI,Helvetica,Arial,sans-serif" fill="#5794F2">48</text>
 <text class="m" x="36" y="126">last 12 months</text>
 <rect class="card" x="204" y="44" width="168" height="92" rx="8"/>
 <rect x="204" y="44" width="168" height="4" rx="2" fill="#73BF69"/>
 <text class="k" x="220" y="72">COMMITS</text>
-<text x="220" y="106" style="font:700 30px -apple-system,Segoe UI,Helvetica,Arial,sans-serif" fill="#73BF69">38</text>
+<text x="220" y="106" style="font:700 30px -apple-system,Segoe UI,Helvetica,Arial,sans-serif" fill="#73BF69">34</text>
 <text class="m" x="220" y="126">last 12 months</text>
 <rect class="card" x="388" y="44" width="168" height="92" rx="8"/>
 <rect x="388" y="44" width="168" height="4" rx="2" fill="#B877D9"/>
