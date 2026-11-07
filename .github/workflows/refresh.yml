@@ -1,0 +1,47 @@
+name: Refresh profile graphics
+
+on:
+  schedule:
+    - cron: "17 6 * * *" # daily, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      # Built-in token: public data only, no secret to manage.
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build graphics
+        run: python3 .assets/build.py
+
+      # Private repo names are checked by the local pre-commit hook; this token
+      # cannot see them, so here the check covers IPs only.
+      - name: Opsec check
+        run: python3 .assets/check_public.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- assets; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git commit -m "Refresh profile graphics"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="128" viewBox="0 0 760 128" role="img" aria-label="Languages">
+<style>
+  .t { font: 600 15px -apple-system, Segoe UI, Helvetica, Arial, sans-serif; fill: #1f2328; }
+  .h { font: 600 14px -apple-system, Segoe UI, Helvetica, Arial, sans-serif; fill: #1f2328; }
+  .l { font: 12px -apple-system, Segoe UI, Helvetica, Arial, sans-serif; fill: #424a53; }
+  .m { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #59636e; }
+  .k { font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #59636e; letter-spacing: 2px; }
+  .card { fill: #f6f8fa; stroke: #d0d7de; }
+  @media (prefers-color-scheme: dark) {
+    .t, .h { fill: #e6edf3; }
+    .l { fill: #c9d1d9; }
+    .m, .k { fill: #9198a1; }
+    .card { fill: #161b22; stroke: #30363d; }
+  }
+</style>
+<text class="t" x="20" y="28">Languages</text>
+<clipPath id="bar"><rect x="20" y="44" width="720" height="14" rx="7"/></clipPath><g clip-path="url(#bar)">
+<rect x="20" y="44" width="348.731" height="14" fill="#5794F2"/>
+<rect x="367.731" y="44" width="114.775" height="14" fill="#FF9830"/>
+<rect x="481.506" y="44" width="105.786" height="14" fill="#8AB8FF"/>
+<rect x="586.293" y="44" width="82.1303" height="14" fill="#73BF69"/>
+<rect x="667.423" y="44" width="73.5771" height="14" fill="#FADE2A"/>
+</g>
+<circle cx="26" cy="80" r="5" fill="#5794F2"/>
+<text class="l" x="38" y="84">Python <tspan class="m">48.3%</tspan></text>
+<circle cx="266" cy="80" r="5" fill="#FF9830"/>
+<text class="l" x="278" y="84">HTML <tspan class="m">15.8%</tspan></text>
+<circle cx="506" cy="80" r="5" fill="#8AB8FF"/>
+<text class="l" x="518" y="84">CSS <tspan class="m">14.6%</tspan></text>
+<circle cx="26" cy="102" r="5" fill="#73BF69"/>
+<text class="l" x="38" y="106">Shell <tspan class="m">11.3%</tspan></text>
+<circle cx="266" cy="102" r="5" fill="#FADE2A"/>
+<text class="l" x="278" y="106">JavaScript <tspan class="m">10.1%</tspan></text>
+</svg>

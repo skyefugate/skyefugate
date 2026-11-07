@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="162" viewBox="0 0 760 162" role="img" aria-label="Talks">
+<style>
+  .t { font: 600 15px -apple-system, Segoe UI, Helvetica, Arial, sans-serif; fill: #1f2328; }
+  .h { font: 600 14px -apple-system, Segoe UI, Helvetica, Arial, sans-serif; fill: #1f2328; }
+  .l { font: 12px -apple-system, Segoe UI, Helvetica, Arial, sans-serif; fill: #424a53; }
+  .m { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #59636e; }
+  .k { font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #59636e; letter-spacing: 2px; }
+  .card { fill: #f6f8fa; stroke: #d0d7de; }
+  @media (prefers-color-scheme: dark) {
+    .t, .h { fill: #e6edf3; }
+    .l { fill: #c9d1d9; }
+    .m, .k { fill: #9198a1; }
+    .card { fill: #161b22; stroke: #30363d; }
+  }
+</style>
+<text class="t" x="20" y="28">Talks</text>
+<rect class="card" x="20" y="44" width="350" height="92" rx="8"/>
+<rect x="20" y="44" width="6" height="92" rx="3" fill="#5794F2"/>
+<text class="h" x="40" y="74">SecKC · Sep 2026</text>
+<text class="l" x="40" y="98">AI for network architecture</text>
+<text class="m" x="40" y="118">topology · blast radius · IaC docs</text>
+<rect class="card" x="390" y="44" width="350" height="92" rx="8"/>
+<rect x="390" y="44" width="6" height="92" rx="3" fill="#B877D9"/>
+<text class="h" x="410" y="74">SecDSM · Dec 2025</text>
+<text class="l" x="410" y="98">AI network troubleshooting</text>
+<text class="m" x="410" y="118">C2 detection · VPC flow logs</text>
+</svg>
