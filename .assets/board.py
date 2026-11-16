@@ -324,8 +324,8 @@ class Board:
         t = self.t
         return f"""<style>
 text {{ font-family: {MONO}; }}
-.sk {{ font-size: 9px; font-weight: 600; }}
-.ll {{ font-size: 8px; fill: {t["mu"]}; }}
+.sk {{ font-size: 10px; font-weight: 600; }}
+.ll {{ font-size: 7px; fill: {t["mu"]}; }}
 .s {{ font-size: 11px; fill: {t["mu"]}; }}
 .fv {{ font-size: 10px; fill: {t["fg"]}; }}
 .lb {{ font-size: 9px; font-weight: 600; letter-spacing: 1px; }}
@@ -348,6 +348,9 @@ text {{ font-family: {MONO}; }}
 
 
 # ---------- layout ----------
+
+FEATURED = ["Ship It", "Touch Grass", "Redemption Arc"]  # plus the chronotype
+CHRONO = "peak commit hour, Central time"
 
 SHORT_LANG = {"JavaScript": "JS", "TypeScript": "TS", "PowerShell": "PS"}
 
@@ -512,6 +515,8 @@ def summary(d: dict, dl: dict, base: dict | None) -> str:
         f"{d['repos']} public repos, {d['lang_count']} languages."
     )
     for name, segs, meaning in superlatives(d, 40):
+        if name not in FEATURED and meaning != CHRONO:
+            continue
         s += f" {name} ({meaning}): {' '.join(t for t, _ in segs)}."
     if d.get("langs"):
         s += " Languages: " + ", ".join(f"{k} {p:.0f}%" for k, p in d["langs"]) + "."
@@ -520,7 +525,7 @@ def summary(d: dict, dl: dict, base: dict | None) -> str:
 
 def render(d: dict, dl: dict, base: dict | None, wide: bool, theme: str) -> str:
     """A compact strip meant to sit under the banner, centred."""
-    W, H = (760, 226) if wide else (480, 404)
+    W, H = (760, 140) if wide else (480, 268)
     pad = 20
     b = Board(W, H, theme)
     t = b.t
@@ -564,19 +569,34 @@ def render(d: dict, dl: dict, base: dict | None, wide: bool, theme: str) -> str:
     b.text("weekly \u00b7 12 mo", bx, base_y + 14, "n", 9)
     b.text(f"peak {peak}", bx + bw, base_y + 14, "n", 9, end=True)
 
-    # superlatives: name left, value right-aligned, 3 columns wide / 2 narrow
-    scols = 3 if wide else 2
-    colw = (W - 2 * pad) / scols
-    room = int((colw - 14 - 15 * 9 * CHAR - 10) / (10 * CHAR))
-    sy0 = (base_y + 40) if not wide else 112
-    rule = sy0 - 14
-    for i, (name, segs, _) in enumerate(superlatives(d, room)):
-        x, y = pad + (i % scols) * colw, sy0 + (i // scols) * 15
-        b.text(name, x, y, "sk", 9, fill=acc[i % len(acc)])
-        right = x + colw - 14
-        for text, kind in reversed(segs):
-            cls = "fv" if kind == "v" else ("n" if kind == "mu" else f"fv {kind}")
-            right -= b.text(text, right, y, cls, 10, end=True) + 6
+    # featured superlatives: one centred line on wide, two on narrow
+    picks = [r for r in superlatives(d, 24) if r[0] in FEATURED or r[2] == CHRONO]
+    picks.sort(key=lambda r: FEATURED.index(r[0]) if r[0] in FEATURED else 1)
+    lines = [picks] if wide else [picks[:2], picks[2:]]
+    rule = base_y + 26
+    fy = rule + 16
+    size, gap, sepw = 10, 6, 5 * 10 * CHAR
+    k = 0
+    for line in lines:
+        widths = [
+            len(n) * size * CHAR
+            + gap
+            + sum(len(t) * size * CHAR for t, _ in segs)
+            + gap * (len(segs) - 1)
+            for n, segs, _ in line
+        ]
+        x = (W - sum(widths) - sepw * (len(line) - 1)) / 2
+        for i, (name, segs, _) in enumerate(line):
+            if i:
+                b.text("\u00b7", x + sepw / 2, fy, "n", size, mid=True)
+                x += sepw
+            x += b.text(name, x, fy, "sk", size, fill=acc[k % len(acc)]) + gap
+            k += 1
+            for text, kind in segs:
+                cls = "fv" if kind == "v" else ("n" if kind == "mu" else f"fv {kind}")
+                x += b.text(text, x, fy, cls, size) + gap
+            x -= gap
+        fy += 16
 
     # language labels in small grey type, then the colour strip on the bottom edge
     segs, labels, x = [], [], 1.0
@@ -593,12 +613,12 @@ def render(d: dict, dl: dict, base: dict | None, wide: bool, theme: str) -> str:
     edge = 0.0
     for options, sx, w in labels:
         for label in options:  # full name first, then the short one
-            half = len(label) * 8 * CHAR / 2 + 3
+            half = len(label) * 7 * CHAR / 2 + 3
             if 2 * half > w + 8:
                 continue
             cx = min(max(sx + w / 2, 6 + half), W - 6 - half)
             if cx - half >= edge:
-                b.text(label, cx, H - 10, "ll", 8, mid=True)
+                b.text(label, cx, H - 9, "ll", 7, mid=True)
                 edge = cx + half
                 break  # if none fit, the alt text still lists it
 

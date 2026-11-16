@@ -204,31 +204,20 @@ class Render(unittest.TestCase):
             "3d",
             "max 4",
             "14/365",
-            "26 on 09-12",
-            "Evening Coder",
-            "9 pm \u00b7 46%",
-            "Sat",
             "Ship It",
             "78% \u00b7 7/9",
-            "2h",
-            "91% \u00b7 10/11",
-            "8 in 5 repos",
-            "devicetype-libr\u2026 \u00b7 908",
-            "2025-12-SecDSM\u2026 \u00b7 214d",
+            "Evening Coder",
+            "9 pm \u00b7 46%",
+            "Touch Grass",
             "41d off",
+            "Redemption Arc",
             "26 after 5w off",
-            "Sep '26 \u00b7 31",
-            "+2 \u00b7 Kotlin",
-            "9% churn",
             "Python 48%",
-            "38%",
-            "+8.8k",
-            "\u2212802",
-            "2026-09-SecKC-AI-Talk",
-            "2020",
         ):
             self.assertIn(want, shown)
         self.assertFalse(any("github" in s.lower() for s in shown))
+        for gone in ("Tab Hoarder", "Necromancer", "Field Trips", "Main Character"):
+            self.assertNotIn(gone, shown)
         self.assertIn("prefers-reduced-motion", self.svgs[(True, "dark")])
 
     def test_only_this_week_breathes(self):
@@ -245,7 +234,6 @@ class Render(unittest.TestCase):
             "longest 4",
             "14 of 365",
             "Evening Coder",
-            "2026-09-SecKC-AI-Talk",
         ):
             self.assertIn(want, desc)
         self.assertEqual(root.get("aria-label"), desc)
