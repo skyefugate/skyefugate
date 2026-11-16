@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="588" viewBox="0 0 480 588" role="img" aria-labelledby="t d" aria-label="Last 12 months: 55 contributions, 40 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers. Current streak 1 day, longest 3, active 14 of 365 days, 7 repos touched, 5 public repos, 5 languages used. Best day 2026-09-08 with 11. Busiest 90d: 2026-09-SecKC-AI-Talk · 17 commits. Peak hour: 11 pm · night owl (56%). Favourite day: Wed · 24% of the year. Weekends: 35% of contributions. Lines: +8.8k −802. Joined: 2020 · 6 yrs ago. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%.">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="588" viewBox="0 0 480 588" role="img" aria-labelledby="t d" aria-label="Last 12 months: 55 contributions, 40 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers. Current streak 1 day, longest 3, active 14 of 365 days, 7 repos touched, 5 public repos, 5 languages used. Best day 2026-09-08 with 12. Busiest 90d: 2026-09-SecKC-AI-Talk · 17 commits. Peak hour: 11 pm · night owl (53%). Favourite day: Wed · 24% of the year. Weekends: 35% of contributions. Lines: +13.0k −1.0k. Joined: 2020 · 6 yrs ago. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%.">
 <title id="t">Skye Fugate, last 12 months, 2026-11-16</title>
-<desc id="d">Last 12 months: 55 contributions, 40 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers. Current streak 1 day, longest 3, active 14 of 365 days, 7 repos touched, 5 public repos, 5 languages used. Best day 2026-09-08 with 11. Busiest 90d: 2026-09-SecKC-AI-Talk · 17 commits. Peak hour: 11 pm · night owl (56%). Favourite day: Wed · 24% of the year. Weekends: 35% of contributions. Lines: +8.8k −802. Joined: 2020 · 6 yrs ago. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%.</desc>
+<desc id="d">Last 12 months: 55 contributions, 40 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers. Current streak 1 day, longest 3, active 14 of 365 days, 7 repos touched, 5 public repos, 5 languages used. Best day 2026-09-08 with 12. Busiest 90d: 2026-09-SecKC-AI-Talk · 17 commits. Peak hour: 11 pm · night owl (53%). Favourite day: Wed · 24% of the year. Weekends: 35% of contributions. Lines: +13.0k −1.0k. Joined: 2020 · 6 yrs ago. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%.</desc>
 <defs>
 <linearGradient id="hg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8AB8FF"/><stop offset="0.333333" stop-color="#5794F2"/><stop offset="0.666667" stop-color="#B877D9"/><stop offset="1" stop-color="#FF7383"/></linearGradient>
 <linearGradient id="bg" gradientUnits="userSpaceOnUse" x1="20" y1="0" x2="460" y2="0"><stop offset="0" stop-color="#8AB8FF"/><stop offset="0.333333" stop-color="#5794F2"/><stop offset="0.666667" stop-color="#B877D9"/><stop offset="1" stop-color="#FF7383"/></linearGradient>
@@ -46,8 +46,8 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <line x1="20" x2="460" y1="506.5" y2="506.5" stroke="#30363d"/>
 <rect class="b" x="20.0" y="504.0" width="5.6" height="2.0" rx="1" fill="url(#bg)" style="animation-delay:1.00s"/>
 <rect class="b" x="28.3" y="504.0" width="5.6" height="2.0" rx="1" fill="url(#bg)" style="animation-delay:1.01s"/>
-<rect class="b" x="36.6" y="492.0" width="5.6" height="14.0" rx="1" fill="url(#bg)" style="animation-delay:1.02s"/>
-<rect class="b" x="44.9" y="500.0" width="5.6" height="6.0" rx="1" fill="url(#bg)" style="animation-delay:1.03s"/>
+<rect class="b" x="36.6" y="494.0" width="5.6" height="12.0" rx="1" fill="url(#bg)" style="animation-delay:1.02s"/>
+<rect class="b" x="44.9" y="498.0" width="5.6" height="8.0" rx="1" fill="url(#bg)" style="animation-delay:1.03s"/>
 <rect class="b" x="53.2" y="504.0" width="5.6" height="2.0" rx="1" fill="url(#bg)" style="animation-delay:1.04s"/>
 <rect class="b" x="61.5" y="504.0" width="5.6" height="2.0" rx="1" fill="url(#bg)" style="animation-delay:1.05s"/>
 <rect class="b" x="69.8" y="492.0" width="5.6" height="14.0" rx="1" fill="url(#bg)" style="animation-delay:1.06s"/>
@@ -373,21 +373,21 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <text class="f lb" x="166.667" y="190" fill="#B877D9" opacity="0" style="animation-delay:1.08s">BEST D#$</text>
 <text class="f lb" x="166.667" y="190" fill="#B877D9" opacity="0" style="animation-delay:1.12s">BEST DA&amp;</text>
 <text class="r lb" x="166.667" y="190" fill="#B877D9" style="animation-delay:1.18s">BEST DAY</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.50s">B#</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.55s">&amp;0</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.60s">B1</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.65s">6#</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.70s">&gt;/</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.75s">84</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.80s">6$</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.85s">1&gt;</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.90s">1&gt;</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.95s">1&amp;</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:1.00s">1$</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:1.05s">1F</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:1.10s">1&gt;</text>
-<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:1.15s">1B</text>
-<text class="r v" x="166.667" y="216" style="animation-delay:1.20s">11</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.50s">&amp;4</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.55s">&lt;&amp;</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.60s">90</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.65s">D5</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.70s">+3</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.75s">#B</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.80s">/=</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.85s">1B</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.90s">17</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:0.95s">1E</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:1.00s">1+</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:1.05s">1=</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:1.10s">1#</text>
+<text class="f v" x="166.667" y="216" opacity="0" style="animation-delay:1.15s">19</text>
+<text class="r v" x="166.667" y="216" style="animation-delay:1.20s">12</text>
 <text class="f n" x="201.067" y="216" opacity="0" style="animation-delay:0.53s">6D/#F</text>
 <text class="f n" x="201.067" y="216" opacity="0" style="animation-delay:0.58s">A9D=7</text>
 <text class="f n" x="201.067" y="216" opacity="0" style="animation-delay:0.62s">96&lt;4F</text>
@@ -583,21 +583,21 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <text class="f lb" x="20" y="337" fill="#5AC8FA" opacity="0" style="animation-delay:1.40s">PEAK HO/1</text>
 <text class="f lb" x="20" y="337" fill="#5AC8FA" opacity="0" style="animation-delay:1.45s">PEAK HOU&gt;</text>
 <text class="r lb" x="20" y="337" fill="#5AC8FA" style="animation-delay:1.50s">PEAK HOUR</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:0.80s">C8 D* E +E&amp;7B 7+&amp; B&amp;19B</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:0.85s">1E &lt;6 7 2784A 33&gt; 8A43&gt;</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:0.90s">11 01 C &amp;7&amp;0% /$$ 084&amp;=</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:0.95s">11 p0 3 C9#=5 317 14=D0</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.00s">11 pm 2 $*02+ BB5 F$0&amp;&gt;</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.05s">11 pm · A%A&gt;F 039 +41D0</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.10s">11 pm · nDE%4 D+D 7/=+D</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.15s">11 pm · nig7% F4E C=4F/</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.20s">11 pm · night /&amp;/ 04&amp;*A</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.25s">11 pm · night E&gt;+ =75F1</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.30s">11 pm · night ow4 &gt;$487</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.35s">11 pm · night owl 0%B2#</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.40s">11 pm · night owl (D10*</text>
-<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.45s">11 pm · night owl (5671</text>
-<text class="r fv" x="132" y="337" style="animation-delay:1.50s">11 pm · night owl (56%)</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:0.80s">98 C&lt; $ 67B&amp;0 8$= $/#78</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:0.85s">1&lt; 8% 4 B+265 82C CBB&gt;2</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:0.90s">11 26 F *7$A&lt; &lt;== $**8#</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:0.95s">11 p2 4 +$3+9 3B&lt; 3F=66</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.00s">11 pm / 2D+70 C3C +/7C8</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.05s">11 pm · 393A% 623 %7309</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.10s">11 pm · nB036 A3$ 7CCCD</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.15s">11 pm · nigF&gt; /18 47&gt;A6</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.20s">11 pm · night EAB &gt;C7#9</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.25s">11 pm · night &amp;&lt;&lt; F&lt;C=6</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.30s">11 pm · night ow3 2CC/3</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.35s">11 pm · night owl 7&gt;E7D</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.40s">11 pm · night owl (87B4</text>
+<text class="f fv" x="132" y="337" opacity="0" style="animation-delay:1.45s">11 pm · night owl (537%</text>
+<text class="r fv" x="132" y="337" style="animation-delay:1.50s">11 pm · night owl (53%)</text>
 <text class="f lb" x="20" y="356" fill="#FF7383" opacity="0" style="animation-delay:0.80s">%/1*&amp;A249 30*</text>
 <text class="f lb" x="20" y="356" fill="#FF7383" opacity="0" style="animation-delay:0.85s">C&amp;/##C&amp;42 307</text>
 <text class="f lb" x="20" y="356" fill="#FF7383" opacity="0" style="animation-delay:0.90s">FFAC9&gt;3E% &gt;=F</text>
@@ -673,36 +673,36 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <text class="f lb" x="20" y="394" fill="#5794F2" opacity="0" style="animation-delay:1.40s">LINE+</text>
 <text class="f lb" x="20" y="394" fill="#5794F2" opacity="0" style="animation-delay:1.45s">LINE&amp;</text>
 <text class="r lb" x="20" y="394" fill="#5794F2" style="animation-delay:1.50s">LINES</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:0.80s">73#E*</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:0.85s">%%6A*</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:0.90s">B&lt;7&amp;%</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:0.95s">+AB0F</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.00s">+&gt;943</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.05s">+F4##</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.10s">+8D75</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.15s">+8C+0</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.20s">+8E%=</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.25s">+8.AF</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.30s">+8.4B</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.35s">+8.$*</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.40s">+8.8&gt;</text>
-<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.45s">+8.83</text>
-<text class="r fv up" x="132" y="394" style="animation-delay:1.50s">+8.8k</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:0.80s">&lt;*$&gt;</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:0.85s">=DD5</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:0.90s">79D$</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:0.95s">B0+8</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.00s">−61*</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.05s">−E$&lt;</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.10s">−/=F</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.15s">−861</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.20s">−837</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.25s">−8=B</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.30s">−8&amp;4</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.35s">−80D</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.40s">−803</text>
-<text class="f fv dn" x="173" y="394" opacity="0" style="animation-delay:1.45s">−805</text>
-<text class="r fv dn" x="173" y="394" style="animation-delay:1.50s">−802</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:0.80s">06BC#&gt;</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:0.85s">/2EF&amp;$</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:0.90s">86*C5+</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:0.95s">+$*0/A</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.00s">+%*&gt;53</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.05s">+1&lt;#7$</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.10s">+1AF%8</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.15s">+134/*</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.20s">+13&lt;1A</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.25s">+13522</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.30s">+13.AE</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.35s">+13.C%</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.40s">+13.0D</text>
+<text class="f fv up" x="132" y="394" opacity="0" style="animation-delay:1.45s">+13.0B</text>
+<text class="r fv up" x="132" y="394" style="animation-delay:1.50s">+13.0k</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:0.80s">&gt;25E5</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:0.85s">D4C61</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:0.90s">&lt;5552</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:0.95s">−8=D$</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.00s">−7&amp;*#</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.05s">−+965</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.10s">−1&amp;8&lt;</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.15s">−1F$&gt;</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.20s">−1#&amp;0</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.25s">−1.8$</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.30s">−1.=D</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.35s">−1.$2</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.40s">−1.0#</text>
+<text class="f fv dn" x="179.6" y="394" opacity="0" style="animation-delay:1.45s">−1.06</text>
+<text class="r fv dn" x="179.6" y="394" style="animation-delay:1.50s">−1.0k</text>
 <text class="f lb" x="20" y="413" fill="#B877D9" opacity="0" style="animation-delay:0.80s">18*&gt;F9</text>
 <text class="f lb" x="20" y="413" fill="#B877D9" opacity="0" style="animation-delay:0.85s">9F2C/4</text>
 <text class="f lb" x="20" y="413" fill="#B877D9" opacity="0" style="animation-delay:0.90s">1CA31A</text>

@@ -32,7 +32,7 @@
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/board-narrow-dark.svg?v=20261116">
   <source media="(max-width: 600px)" srcset="assets/board-narrow-light.svg?v=20261116">
   <source media="(prefers-color-scheme: dark)" srcset="assets/board-wide-dark.svg?v=20261116">
-  <img src="assets/board-wide-light.svg?v=20261116" alt="Last 12 months: 55 contributions, 40 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers. Current streak 1 day, longest 3, active 14 of 365 days, 7 repos touched, 5 public repos, 5 languages used. Best day 2026-09-08 with 11. Busiest 90d: 2026-09-SecKC-AI-Talk · 17 commits. Peak hour: 11 pm · night owl (56%). Favourite day: Wed · 24% of the year. Weekends: 35% of contributions. Lines: +8.8k −802. Joined: 2020 · 6 yrs ago. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%." width="760">
+  <img src="assets/board-wide-light.svg?v=20261116" alt="Last 12 months: 55 contributions, 40 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers. Current streak 1 day, longest 3, active 14 of 365 days, 7 repos touched, 5 public repos, 5 languages used. Best day 2026-09-08 with 12. Busiest 90d: 2026-09-SecKC-AI-Talk · 17 commits. Peak hour: 11 pm · night owl (53%). Favourite day: Wed · 24% of the year. Weekends: 35% of contributions. Lines: +13.0k −1.0k. Joined: 2020 · 6 yrs ago. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%." width="760">
 </picture>
 <!-- board:end -->
 
