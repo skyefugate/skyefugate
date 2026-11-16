@@ -1,0 +1,772 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="140" viewBox="0 0 760 140" role="img" aria-labelledby="t d" aria-label="Last 12 months: 61 contributions, 46 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers, 0 stars. Current streak 2 days, longest 3, active 15 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 50%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%.">
+<title id="t">Skye Fugate, last 12 months, 2026-11-16</title>
+<desc id="d">Last 12 months: 61 contributions, 46 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers, 0 stars. Current streak 2 days, longest 3, active 15 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 50%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%.</desc>
+<defs>
+<linearGradient id="bg" gradientUnits="userSpaceOnUse" x1="544" y1="0" x2="740" y2="0"><stop offset="0" stop-color="#8AB8FF"/><stop offset="0.333333" stop-color="#5794F2"/><stop offset="0.666667" stop-color="#B877D9"/><stop offset="1" stop-color="#FF7383"/></linearGradient>
+<linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8AB8FF"/><stop offset="0.333333" stop-color="#5794F2"/><stop offset="0.666667" stop-color="#B877D9"/><stop offset="1" stop-color="#FF7383"/></linearGradient>
+<clipPath id="card"><rect width="760" height="140" rx="8"/></clipPath>
+</defs>
+<style>
+text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; }
+.sk { font-size: 10px; font-weight: 600; }
+.ll { font-size: 7px; fill: #9198a1; }
+.s { font-size: 11px; fill: #9198a1; }
+.fv { font-size: 10px; fill: #e6edf3; }
+.lb { font-size: 9px; font-weight: 600; letter-spacing: 1px; }
+.v { font-size: 18px; font-weight: 600; fill: #e6edf3; }
+.d { font-size: 10px; font-weight: 600; }
+.n { font-size: 9px; fill: #9198a1; }
+.up { fill: #3fb950; } .dn { fill: #f85149; } .mu { fill: #9198a1; }
+.f { animation: flash 0.05s linear; }
+.r { animation: in .01s linear backwards; }
+.b { transform-box: fill-box; transform-origin: 50% 100%; animation: grow .55s cubic-bezier(.16,1,.3,1) backwards; }
+.b.now { animation: grow .55s cubic-bezier(.16,1,.3,1) backwards, breathe 1.6s cubic-bezier(.16,1,.3,1) 2.8s infinite alternate; }
+.lg { transform-box: fill-box; transform-origin: 0 50%; animation: slide .6s cubic-bezier(.16,1,.3,1) backwards; }
+@keyframes flash { from, to { opacity: 1; } }
+@keyframes in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes grow { from { transform: scaleY(0); } }
+@keyframes slide { from { transform: scaleX(0); } }
+@keyframes breathe { to { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<g clip-path="url(#card)">
+<rect width="760" height="140" fill="#0d1117"/>
+<rect width="760" height="3" fill="url(#edge)"/>
+<rect class="lg" x="1.0" y="136" width="364.5" height="3" fill="#3572A5" style="animation-delay:1.70s"/>
+<rect class="lg" x="365.0" y="136" width="120.9" height="3" fill="#e34c26" style="animation-delay:1.78s"/>
+<rect class="lg" x="485.4" y="136" width="111.4" height="3" fill="#663399" style="animation-delay:1.86s"/>
+<rect class="lg" x="596.3" y="136" width="86.4" height="3" fill="#89e051" style="animation-delay:1.94s"/>
+<rect class="lg" x="682.2" y="136" width="77.3" height="3" fill="#f1e05a" style="animation-delay:2.02s"/>
+</g>
+<rect x=".5" y=".5" width="759" height="139" rx="8" fill="none" stroke="#30363d"/>
+<line x1="544" x2="740" y1="70.5" y2="70.5" stroke="#30363d"/>
+<line x1="20" x2="740" y1="96" y2="96" stroke="#30363d" stroke-dasharray="2 3"/>
+<rect class="b" x="544.0" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.90s"/>
+<rect class="b" x="547.7" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.91s"/>
+<rect class="b" x="551.4" y="55.5" width="2.6" height="14.5" rx="1" fill="url(#bg)" style="animation-delay:0.92s"/>
+<rect class="b" x="555.1" y="63.8" width="2.6" height="6.2" rx="1" fill="url(#bg)" style="animation-delay:0.93s"/>
+<rect class="b" x="558.8" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.94s"/>
+<rect class="b" x="562.5" y="67.9" width="2.6" height="2.1" rx="1" fill="url(#bg)" style="animation-delay:0.95s"/>
+<rect class="b" x="566.2" y="55.5" width="2.6" height="14.5" rx="1" fill="url(#bg)" style="animation-delay:0.96s"/>
+<rect class="b" x="569.9" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.97s"/>
+<rect class="b" x="573.6" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.98s"/>
+<rect class="b" x="577.3" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.99s"/>
+<rect class="b" x="581.0" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.00s"/>
+<rect class="b" x="584.7" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.01s"/>
+<rect class="b" x="588.4" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.02s"/>
+<rect class="b" x="592.1" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.03s"/>
+<rect class="b" x="595.8" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.04s"/>
+<rect class="b" x="599.5" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.05s"/>
+<rect class="b" x="603.2" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.06s"/>
+<rect class="b" x="606.9" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.07s"/>
+<rect class="b" x="610.6" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.08s"/>
+<rect class="b" x="614.3" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.09s"/>
+<rect class="b" x="618.0" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.10s"/>
+<rect class="b" x="621.7" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.11s"/>
+<rect class="b" x="625.4" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.12s"/>
+<rect class="b" x="629.1" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.13s"/>
+<rect class="b" x="632.8" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.14s"/>
+<rect class="b" x="636.5" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.15s"/>
+<rect class="b" x="640.2" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.16s"/>
+<rect class="b" x="643.8" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.17s"/>
+<rect class="b" x="647.5" y="67.9" width="2.6" height="2.1" rx="1" fill="url(#bg)" style="animation-delay:1.18s"/>
+<rect class="b" x="651.2" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.19s"/>
+<rect class="b" x="654.9" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.20s"/>
+<rect class="b" x="658.6" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.21s"/>
+<rect class="b" x="662.3" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.22s"/>
+<rect class="b" x="666.0" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.23s"/>
+<rect class="b" x="669.7" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.24s"/>
+<rect class="b" x="673.4" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.25s"/>
+<rect class="b" x="677.1" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.26s"/>
+<rect class="b" x="680.8" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.27s"/>
+<rect class="b" x="684.5" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.28s"/>
+<rect class="b" x="688.2" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.29s"/>
+<rect class="b" x="691.9" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.30s"/>
+<rect class="b" x="695.6" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.31s"/>
+<rect class="b" x="699.3" y="16.0" width="2.6" height="54.0" rx="1" fill="url(#bg)" style="animation-delay:1.32s"/>
+<rect class="b" x="703.0" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.33s"/>
+<rect class="b" x="706.7" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.34s"/>
+<rect class="b" x="710.4" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.35s"/>
+<rect class="b" x="714.1" y="67.9" width="2.6" height="2.1" rx="1" fill="url(#bg)" style="animation-delay:1.36s"/>
+<rect class="b" x="717.8" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.37s"/>
+<rect class="b" x="721.5" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.38s"/>
+<rect class="b" x="725.2" y="68.5" width="2.6" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.39s"/>
+<rect class="b" x="728.9" y="63.8" width="2.6" height="6.2" rx="1" fill="url(#bg)" style="animation-delay:1.40s"/>
+<rect class="b" x="732.6" y="67.9" width="2.6" height="2.1" rx="1" fill="url(#bg)" style="animation-delay:1.41s"/>
+<rect class="b now" x="736.3" y="47.2" width="2.6" height="22.8" rx="1" fill="#FF9830" style="animation-delay:1.42s, 2.60s"/>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.05s">13/=051&lt;</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.10s">9B1+697F</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.15s">C3=1$C$3</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.20s">CAC*&gt;D10</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.25s">COF%$B=C</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.30s">COF$&lt;*8&gt;</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.35s">CON#%*$2</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.40s">CONT*8$B</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.45s">CONTA1F0</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.50s">CONTR&amp;31</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.55s">CONTRB0B</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.60s">CONTRI3F</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.65s">CONTRI&amp;A</text>
+<text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.70s">CONTRIB&amp;</text>
+<text class="r lb" x="20" y="26" fill="#5794F2" style="animation-delay:0.75s">CONTRIBS</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.08s">+F</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.12s">4F</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.18s">3#</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.23s">64</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.28s">B/</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.33s">&lt;B</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.38s">C&lt;</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.43s">6B</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.48s">6F</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.53s">6A</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.57s">68</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.62s">6%</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.68s">6B</text>
+<text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.73s">6&lt;</text>
+<text class="r v" x="20" y="46" style="animation-delay:0.78s">61</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.10s">+#+&amp;E&lt;1</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.15s">4&gt;062A=</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.20s">C0BAB#C</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.25s">C2A/67&amp;</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.30s">CO2&amp;CF4</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.35s">COA2&gt;#7</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.40s">COM$+E/</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.45s">COM2=1%</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.50s">COMM0%2</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.55s">COMM*22</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.60s">COMMI&amp;#</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.65s">COMMI2%</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.70s">COMMITC</text>
+<text class="f lb" x="104" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.75s">COMMIT2</text>
+<text class="r lb" x="104" y="26" fill="#B877D9" style="animation-delay:0.80s">COMMITS</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.12s">D#</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.17s">D8</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.23s">D%</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.28s">43</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.33s">A#</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.38s">27</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.43s">7C</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.48s">4*</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.53s">4=</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.57s">43</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.62s">40</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.68s">4$</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.73s">4&lt;</text>
+<text class="f v" x="104" y="46" opacity="0" style="animation-delay:0.78s">4F</text>
+<text class="r v" x="104" y="46" style="animation-delay:0.83s">46</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.15s">$FB</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.20s">C3&gt;</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.25s">02E</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.30s">77D</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.35s">+8B</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.40s">P%=</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.45s">P+1</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.50s">P%/</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.55s">PD/</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.60s">P7/</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.65s">PR5</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.70s">PR&gt;</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.75s">PRA</text>
+<text class="f lb" x="188" y="26" fill="#FF9830" opacity="0" style="animation-delay:0.80s">PR9</text>
+<text class="r lb" x="188" y="26" fill="#FF9830" style="animation-delay:0.85s">PRS</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.17s">C</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.22s">2</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.28s">%</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.33s">B</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.38s">D</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.42s">4</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.48s">3</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.53s">=</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.57s">*</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.62s">D</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.68s">E</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.73s">F</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.78s">3</text>
+<text class="f v" x="188" y="46" opacity="0" style="animation-delay:0.82s">&lt;</text>
+<text class="r v" x="188" y="46" style="animation-delay:0.88s">6</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.20s">13/3/E3</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.25s">*4B$F%&lt;</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.30s">R%*##$&amp;</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.35s">R9FC3%B</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.40s">RE#95A#</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.45s">RE6&gt;DDF</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.50s">REV=&gt;&amp;%</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.55s">REV4%7%</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.60s">REVIB$&lt;</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.65s">REVI71*</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.70s">REVIEAA</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.75s">REVIE#D</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.80s">REVIEW+</text>
+<text class="f lb" x="272" y="26" fill="#5AC8FA" opacity="0" style="animation-delay:0.85s">REVIEW7</text>
+<text class="r lb" x="272" y="26" fill="#5AC8FA" style="animation-delay:0.90s">REVIEWS</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.23s">B</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.28s">2</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.33s">8</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.38s">B</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.43s">6</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.48s">2</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.53s">3</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.58s">0</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.62s">7</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.68s">C</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.73s">6</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.78s">8</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.83s">1</text>
+<text class="f v" x="272" y="46" opacity="0" style="animation-delay:0.88s">D</text>
+<text class="r v" x="272" y="46" style="animation-delay:0.93s">0</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.25s">&amp;%35#=</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.30s">4/&amp;02C</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.35s">*C2&gt;DA</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.40s">I4E5B9</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.45s">I7+8*%</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.50s">IS0=6D</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.55s">ISF4#+</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.60s">ISSE&lt;4</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.65s">ISS15B</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.70s">ISS16+</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.75s">ISSU+&gt;</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.80s">ISSU1+</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.85s">ISSUE5</text>
+<text class="f lb" x="356" y="26" fill="#FF7383" opacity="0" style="animation-delay:0.90s">ISSUEB</text>
+<text class="r lb" x="356" y="26" fill="#FF7383" style="animation-delay:0.95s">ISSUES</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.28s">%</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.33s">+</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.38s">A</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.43s">&gt;</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.48s">=</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.53s">7</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.58s">1</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.62s">$</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.68s">&gt;</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.73s">A</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.78s">B</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.83s">&gt;</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.88s">+</text>
+<text class="f v" x="356" y="46" opacity="0" style="animation-delay:0.93s">6</text>
+<text class="r v" x="356" y="46" style="animation-delay:0.98s">2</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.30s">C257=9&lt;/A</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.35s">BB5/1&gt;#F3</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.40s">F7&amp;7%$79&gt;</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.45s">F8&lt;45&amp;BE4</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.50s">FOF=63711</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.55s">FOL38%/B1</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.60s">FOLB3E*57</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.65s">FOLL2F%7$</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.70s">FOLLOCE&lt;B</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.75s">FOLLOA0F$</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.80s">FOLLOW&lt;&amp;#</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.85s">FOLLOWE0#</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.90s">FOLLOWE33</text>
+<text class="f lb" x="440" y="26" fill="#FADE2A" opacity="0" style="animation-delay:0.95s">FOLLOWER*</text>
+<text class="r lb" x="440" y="26" fill="#FADE2A" style="animation-delay:1.00s">FOLLOWERS</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.33s">C</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.38s">2</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.43s">%</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.48s">B</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.53s">D</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.57s">4</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.62s">3</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.68s">=</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.73s">*</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.78s">D</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.82s">E</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.88s">F</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.93s">3</text>
+<text class="f v" x="440" y="46" opacity="0" style="animation-delay:0.98s">&lt;</text>
+<text class="r v" x="440" y="46" style="animation-delay:1.03s">6</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.35s">*363%*</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.40s">C1E5*5</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.45s">F547&amp;1</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.50s">SB/EC#</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.55s">S+&gt;AF*</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.60s">ST/&amp;E3</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.65s">ST/&lt;A%</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.70s">STR&amp;50</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.75s">STRAD1</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.80s">STR+#9</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.85s">STRE67</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.90s">STRE$+</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:0.95s">STREA=</text>
+<text class="f lb" x="20" y="66" fill="#5794F2" opacity="0" style="animation-delay:1.00s">STREA3</text>
+<text class="r lb" x="20" y="66" fill="#5794F2" style="animation-delay:1.05s">STREAK</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.38s">=A</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.42s">&gt;&lt;</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.47s">&gt;E</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.53s">B9</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.57s">+3</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.62s">+B</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.68s">&gt;F</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.73s">2C</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.78s">2&lt;</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.82s">27</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.88s">2/</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.93s">2F</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:0.98s">22</text>
+<text class="f v" x="20" y="86" opacity="0" style="animation-delay:1.02s">29</text>
+<text class="r v" x="20" y="86" style="animation-delay:1.08s">2d</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.40s">**3 2</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.45s">A67 8</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.50s">15B %</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.55s">m22 B</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.60s">m0% C</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.65s">mC# 0</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.70s">ma# 3</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.75s">ma7 $</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.80s">maB *</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.85s">max 7</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.90s">max +</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:0.95s">max 6</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:1.00s">max %</text>
+<text class="f n" x="46.6" y="86" opacity="0" style="animation-delay:1.05s">max =</text>
+<text class="r n" x="46.6" y="86" style="animation-delay:1.10s">max 3</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.42s">/1&amp;ED7</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.47s">879+C4</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.53s">1049BE</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.57s">A5&gt;+8#</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.62s">AC840=</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.68s">AC%&gt;*1</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.73s">ACAE3%</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.78s">ACT$F&amp;</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.82s">ACTC48</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.88s">ACT&lt;8D</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.93s">ACTI4*</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:0.98s">ACTIB/</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:1.03s">ACTIV1</text>
+<text class="f lb" x="104" y="66" fill="#B877D9" opacity="0" style="animation-delay:1.07s">ACTIV&lt;</text>
+<text class="r lb" x="104" y="66" fill="#B877D9" style="animation-delay:1.12s">ACTIVE</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.45s">2196E3</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.50s">8D2&amp;=5</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.55s">#2$F3$</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.60s">1+1A48</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.65s">17DCEE</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.70s">15752#</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.75s">15*24C</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.80s">15/0/4</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.85s">15/C+3</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.90s">15/A06</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:0.95s">15/32#</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:1.00s">15/3$8</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:1.05s">15/36+</text>
+<text class="f v" x="104" y="86" opacity="0" style="animation-delay:1.10s">15/362</text>
+<text class="r v" x="104" y="86" style="animation-delay:1.15s">15/365</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.48s">EFA41</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.53s">D+*EC</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.58s">F&amp;&lt;7%</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.62s">S#4&gt;3</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.68s">S%534</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.73s">S*&lt;&gt;2</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.78s">ST3B9</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.83s">ST&amp;#%</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.88s">ST#80</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.93s">STAC2</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:0.98s">STA4$</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:1.03s">STA&lt;$</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:1.08s">STAR6</text>
+<text class="f lb" x="188" y="66" fill="#FF9830" opacity="0" style="animation-delay:1.12s">STAR%</text>
+<text class="r lb" x="188" y="66" fill="#FF9830" style="animation-delay:1.18s">STARS</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.50s">B</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.55s">2</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.60s">8</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.65s">B</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.70s">6</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.75s">2</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.80s">3</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.85s">0</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.90s">7</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:0.95s">C</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:1.00s">6</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:1.05s">8</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:1.10s">1</text>
+<text class="f v" x="188" y="86" opacity="0" style="animation-delay:1.15s">D</text>
+<text class="r v" x="188" y="86" style="animation-delay:1.20s">0</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.53s">*$7*&gt;A</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.58s">7&amp;C3E0</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.62s">6F20&lt;8</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.68s">P9/55*</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.73s">P86BD$</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.78s">PU1671</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.83s">PU&gt;19#</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.88s">PUB$#7</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.93s">PUB1FD</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:0.98s">PUB3+D</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:1.02s">PUBLF7</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:1.08s">PUBL3C</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:1.12s">PUBLI6</text>
+<text class="f lb" x="272" y="66" fill="#5AC8FA" opacity="0" style="animation-delay:1.18s">PUBLI3</text>
+<text class="r lb" x="272" y="66" fill="#5AC8FA" style="animation-delay:1.23s">PUBLIC</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:0.55s">B</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:0.60s">8</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:0.65s">&gt;</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:0.70s">#</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:0.75s">&lt;</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:0.80s">1</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:0.85s">#</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:0.90s">7</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:0.95s">$</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:1.00s">E</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:1.05s">$</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:1.10s">&amp;</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:1.15s">+</text>
+<text class="f v" x="272" y="86" opacity="0" style="animation-delay:1.20s">3</text>
+<text class="r v" x="272" y="86" style="animation-delay:1.25s">5</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:0.58s">1$1/0</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:0.63s">2+72*</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:0.68s">756B8</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:0.73s">r61*E</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:0.78s">r67&amp;2</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:0.83s">r15F5</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:0.88s">reA#1</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:0.93s">re&amp;79</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:0.98s">re/4C</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:1.03s">rep$B</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:1.08s">rep=*</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:1.12s">repC2</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:1.18s">repo9</text>
+<text class="f n" x="287.8" y="86" opacity="0" style="animation-delay:1.23s">repo9</text>
+<text class="r n" x="287.8" y="86" style="animation-delay:1.28s">repos</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:0.60s">E#7C&lt;</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:0.65s">7745/</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:0.70s">*&lt;%1&gt;</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:0.75s">LA4$&amp;</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:0.80s">L*AF&gt;</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:0.85s">L1D9%</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:0.90s">LA2E$</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:0.95s">LA&lt;&amp;2</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:1.00s">LA#%/</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:1.05s">LAN%0</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:1.10s">LAN59</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:1.15s">LAN4E</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:1.20s">LANG$</text>
+<text class="f lb" x="356" y="66" fill="#FF7383" opacity="0" style="animation-delay:1.25s">LANG=</text>
+<text class="r lb" x="356" y="66" fill="#FF7383" style="animation-delay:1.30s">LANGS</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:0.63s">B</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:0.68s">8</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:0.73s">&gt;</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:0.78s">#</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:0.83s">&lt;</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:0.88s">1</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:0.93s">#</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:0.98s">7</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:1.03s">$</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:1.08s">E</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:1.12s">$</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:1.18s">&amp;</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:1.23s">+</text>
+<text class="f v" x="356" y="86" opacity="0" style="animation-delay:1.28s">3</text>
+<text class="r v" x="356" y="86" style="animation-delay:1.33s">5</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:0.65s">&lt;B&amp;=F7</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:0.70s">=05F&lt;C</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:0.75s">34&gt;&amp;=2</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:0.80s">M14$#F</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:0.85s">M98+E3</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:0.90s">ME&lt;==1</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:0.95s">ME5#*&amp;</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:1.00s">MERCC0</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:1.05s">MERFE4</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:1.10s">MER#8F</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:1.15s">MERG25</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:1.20s">MERG85</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:1.25s">MERGE%</text>
+<text class="f lb" x="440" y="66" fill="#FADE2A" opacity="0" style="animation-delay:1.30s">MERGE&gt;</text>
+<text class="r lb" x="440" y="66" fill="#FADE2A" style="animation-delay:1.35s">MERGED</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:0.68s">/</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:0.73s">&amp;</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:0.78s">%</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:0.83s">4</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:0.88s">9</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:0.93s">&gt;</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:0.98s">$</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:1.03s">6</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:1.08s">E</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:1.12s">%</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:1.18s">B</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:1.23s">F</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:1.28s">$</text>
+<text class="f v" x="440" y="86" opacity="0" style="animation-delay:1.33s">7</text>
+<text class="r v" x="440" y="86" style="animation-delay:1.38s">7</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:0.70s">53&lt;</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:0.75s">=EB</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:0.80s">F/8</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:0.85s">1A0</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:0.90s">7&lt;$</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:0.95s">P04</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:1.00s">P26</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:1.05s">P3F</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:1.10s">P$=</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:1.15s">P7$</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:1.20s">PR9</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:1.25s">PR1</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:1.30s">PR8</text>
+<text class="f n" x="455.8" y="86" opacity="0" style="animation-delay:1.35s">PR6</text>
+<text class="r n" x="455.8" y="86" style="animation-delay:1.40s">PRs</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:0.73s">E*5D$= 5 /E 3&gt;</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:0.78s">w+446A * 25 *E</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:0.83s">we1$/9 # /2 DB</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:0.88s">wee98C 3 $$ 96</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:0.93s">week1&amp; &amp; 2&lt; 50</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:0.98s">weeklF E 83 FA</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:1.03s">weekly 9 6* 7#</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:1.08s">weekly 5 18 83</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:1.12s">weekly · &amp;= 1E</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:1.18s">weekly · F0 0&gt;</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:1.23s">weekly · 1+ #8</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:1.28s">weekly · 12 /1</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:1.33s">weekly · 12 DD</text>
+<text class="f n" x="544" y="84" opacity="0" style="animation-delay:1.38s">weekly · 12 mB</text>
+<text class="r n" x="544" y="84" style="animation-delay:1.43s">weekly · 12 mo</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:0.75s">&amp;3#F 93</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:0.80s">2EEA 67</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:0.85s">p428 $7</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:0.90s">p05F 12</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:0.95s">peA6 *A</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:1.00s">peE&gt; 33</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:1.05s">pea0 B0</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:1.10s">pea# 49</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:1.15s">peak 93</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:1.20s">peak #*</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:1.25s">peak 8%</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:1.30s">peak 0F</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:1.35s">peak 2F</text>
+<text class="f n" x="740" y="84" text-anchor="end" opacity="0" style="animation-delay:1.40s">peak 2A</text>
+<text class="r n" x="740" y="84" text-anchor="end" style="animation-delay:1.45s">peak 26</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:0.78s">4/30 +0</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:0.83s">788B /C</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:0.88s">S%## &lt;1</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:0.93s">S&amp;&gt;F %9</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:0.98s">Sh48 +*</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:1.03s">ShBC 49</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:1.08s">Shi7 /=</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:1.13s">Shi&gt; 6/</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:1.18s">Ship D&amp;</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:1.23s">Ship 2&amp;</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:1.28s">Ship %7</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:1.33s">Ship &gt;*</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:1.38s">Ship I7</text>
+<text class="f sk" x="68" y="112" fill="#5794F2" opacity="0" style="animation-delay:1.43s">Ship I6</text>
+<text class="r sk" x="68" y="112" fill="#5794F2" style="animation-delay:1.48s">Ship It</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:0.80s">FBB 4 /9&gt;</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:0.85s">90&gt; 5 79B</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:0.90s">7B3 * /8%</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:0.95s">795 &lt; C51</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.00s">78= &amp; E*F</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.05s">78% 4 &lt;=2</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.10s">78% % %71</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.15s">78% &gt; 8D&lt;</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.20s">78% · 960</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.25s">78% · &gt;&gt;&lt;</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.30s">78% · &lt;&amp;=</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.35s">78% · 7C6</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.40s">78% · 78&lt;</text>
+<text class="f fv" x="116" y="112" opacity="0" style="animation-delay:1.45s">78% · 7/8</text>
+<text class="r fv" x="116" y="112" style="animation-delay:1.50s">78% · 7/9</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.80s">C</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.85s">6</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.90s">D</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.95s">1</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.00s">6</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.05s">5</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.10s">F</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.15s">C</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.20s">4</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.25s">3</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.30s">/</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.35s">E</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.40s">&lt;</text>
+<text class="f n" x="185" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.45s">%</text>
+<text class="r n" x="185" y="112" text-anchor="middle" style="animation-delay:1.50s">·</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:0.80s">%F=9&lt; 1ED</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:0.85s">E+EA5 4#4</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:0.90s">N04B$ FF7</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:0.95s">N87#&gt; 81&gt;</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.00s">Ni73/ EA&gt;</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.05s">Nig95 6&lt;&gt;</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.10s">Nig1/ +&lt;E</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.15s">Nigh0 D75</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.20s">Night B&gt;0</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.25s">Night 5C4</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.30s">Night =#7</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.35s">Night O#&gt;</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.40s">Night O9&lt;</text>
+<text class="f sk" x="200" y="112" fill="#B877D9" opacity="0" style="animation-delay:1.45s">Night Ow7</text>
+<text class="r sk" x="200" y="112" fill="#B877D9" style="animation-delay:1.50s">Night Owl</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:0.80s">*9 7&gt; / E$9</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:0.85s">28 9&lt; * +*$</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:0.90s">12 0+ 2 760</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:0.95s">11 D/ A 5/6</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.00s">11 0= &gt; +/B</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.05s">11 =/ 2 =*=</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.10s">11 p* % 4CF</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.15s">11 pm 4 371</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.20s">11 pm E %*A</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.25s">11 pm · 02#</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.30s">11 pm · D+D</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.35s">11 pm · *=6</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.40s">11 pm · 5E+</text>
+<text class="f fv" x="260" y="112" opacity="0" style="animation-delay:1.45s">11 pm · 50&lt;</text>
+<text class="r fv" x="260" y="112" style="animation-delay:1.50s">11 pm · 50%</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.80s">C</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.85s">6</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.90s">D</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.95s">1</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.00s">6</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.05s">5</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.10s">F</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.15s">C</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.20s">4</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.25s">3</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.30s">/</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.35s">E</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.40s">&lt;</text>
+<text class="f n" x="341" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.45s">%</text>
+<text class="r n" x="341" y="112" text-anchor="middle" style="animation-delay:1.50s">·</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:0.80s">949&amp;4 9088+</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:0.85s">&amp;6EE9 1*&lt;=+</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:0.90s">T+907 6CE/6</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:0.95s">To3D+ 9+5/5</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.00s">Tou*&gt; 1DC&amp;$</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.05s">Tou6D /*$3/</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.10s">ToucC 6EC8&lt;</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.15s">Touch F#574</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.20s">Touch 83%52</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.25s">Touch G7#D&amp;</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.30s">Touch G%9C=</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.35s">Touch GrC2&amp;</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.40s">Touch Gra&lt;7</text>
+<text class="f sk" x="356" y="112" fill="#FF9830" opacity="0" style="animation-delay:1.45s">Touch Gras+</text>
+<text class="r sk" x="356" y="112" fill="#FF9830" style="animation-delay:1.50s">Touch Grass</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:0.80s">&gt;&gt;*7 &amp;#*</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:0.85s">64&lt;A B9%</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:0.90s">1E$C &lt;4A</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:0.95s">1F+F 5&amp;9</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.00s">151&lt; =4&amp;</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.05s">15%/ 36=</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.10s">1512 E/3</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.15s">151d &amp;&amp;1</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.20s">151d 9&amp;3</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.25s">151d 86&lt;</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.30s">151d E25</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.35s">151d o%9</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.40s">151d o/3</text>
+<text class="f fv" x="428" y="112" opacity="0" style="animation-delay:1.45s">151d ofD</text>
+<text class="r fv" x="428" y="112" style="animation-delay:1.50s">151d off</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.80s">C</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.85s">6</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.90s">D</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:0.95s">1</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.00s">6</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.05s">5</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.10s">F</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.15s">C</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.20s">4</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.25s">3</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.30s">/</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.35s">E</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.40s">&lt;</text>
+<text class="f n" x="491" y="112" text-anchor="middle" opacity="0" style="animation-delay:1.45s">%</text>
+<text class="r n" x="491" y="112" text-anchor="middle" style="animation-delay:1.50s">·</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:0.80s">0%A&amp;&amp;*$D2C **F</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:0.85s">R/+8B&lt;%C*$ 3CE</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:0.90s">Re/89=E07* 2%%</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:0.95s">RedC&gt;B=1%B /*0</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.00s">Rede21+%&amp;A &lt;+%</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.05s">Redem$/&amp;&amp;&lt; *%2</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.10s">Redemp&lt;34D 9*$</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.15s">Redempt&amp;4* 97B</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.20s">Redempti39 7D$</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.25s">Redemptio&gt; 85%</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.30s">Redemption 8#&gt;</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.35s">Redemption A&gt;*</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.40s">Redemption A/2</text>
+<text class="f sk" x="506" y="112" fill="#5AC8FA" opacity="0" style="animation-delay:1.45s">Redemption Ar&gt;</text>
+<text class="r sk" x="506" y="112" fill="#5AC8FA" style="animation-delay:1.50s">Redemption Arc</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:0.80s">7E F/%D7 21/ 48*</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:0.85s">2% $2#$% 812 3D2</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:0.90s">26 991&gt;D E$7 917</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:0.95s">26 &amp;&lt;*9= D7C $&lt;%</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.00s">26 a3&amp;4C =$5 BA3</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.05s">26 af&lt;&amp;F DBA D08</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.10s">26 aftC1 1$# 2/8</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.15s">26 after FF* /B2</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.20s">26 after 1&gt;A &gt;31</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.25s">26 after 17+ E#6</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.30s">26 after 137 84F</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.35s">26 after 13w 10=</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.40s">26 after 13w 473</text>
+<text class="f fv" x="596" y="112" opacity="0" style="animation-delay:1.45s">26 after 13w o&lt;#</text>
+<text class="r fv" x="596" y="112" style="animation-delay:1.50s">26 after 13w off</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.80s">8&lt;3&amp;#&gt; CA/</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.85s">D4/&amp;&amp;= 25$</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.90s">P29&amp;=* C$&gt;</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.95s">PyC0$* DE3</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.00s">Py/17A #FB</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.05s">Pyt1%0 E97</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.10s">PythD&lt; 3BE</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.15s">Pytho1 3B8</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.20s">PythoD E/6</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.25s">Python 544</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.30s">Python &lt;=#</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.35s">Python A56</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.40s">Python 404</text>
+<text class="f ll" x="182.999" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.45s">Python 48&gt;</text>
+<text class="r ll" x="182.999" y="131" text-anchor="middle" style="animation-delay:1.50s">Python 48%</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.80s">/#9&amp; &gt;09</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.85s">E&amp;E/ $2+</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.90s">H&amp;F0 19C</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.95s">H&lt;C= *B&amp;</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.00s">HT/* +*9</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.05s">HT$5 42=</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.10s">HTMF =9F</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.15s">HTML &gt;14</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.20s">HTML *67</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.25s">HTML #50</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.30s">HTML 90C</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.35s">HTML 1A2</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.40s">HTML 1%&lt;</text>
+<text class="f ll" x="425.207" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.45s">HTML 16/</text>
+<text class="r ll" x="425.207" y="131" text-anchor="middle" style="animation-delay:1.50s">HTML 16%</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.80s">96D A*$</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.85s">A%6 6&amp;1</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.90s">CF4 302</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.95s">C%6 F%6</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.00s">CS= /63</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.05s">CS4 /8%</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.10s">CSS &amp;BF</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.15s">CSS &lt;+3</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.20s">CSS $$%</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.25s">CSS 13+</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.30s">CSS 1%6</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.35s">CSS 1D9</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.40s">CSS 15#</text>
+<text class="f ll" x="540.868" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.45s">CSS 15%</text>
+<text class="r ll" x="540.868" y="131" text-anchor="middle" style="animation-delay:1.50s">CSS 15%</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.80s">E&gt;E2% =$9</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.85s">721$A A&gt;&amp;</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.90s">S&gt;4DB 19%</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.95s">S&lt;/9% 9$#</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.00s">Sh8+C *&lt;B</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.05s">She8&amp; &lt;&amp;7</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.10s">SheE&lt; +9=</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.15s">Shel+ 3E&gt;</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.20s">Shell =75</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.25s">Shell 6//</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.30s">Shell 8A1</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.35s">Shell 1*5</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.40s">Shell 1%1</text>
+<text class="f ll" x="639.253" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.45s">Shell 112</text>
+<text class="r ll" x="639.253" y="131" text-anchor="middle" style="animation-delay:1.50s">Shell 11%</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.80s">+&lt;*D8/F1C% 09+</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.85s">J4CD2&lt;4BE* 9EE</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.90s">JaBE/$EA2* &lt;%%</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:0.95s">JavD8&gt;FA&amp;% B7E</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.00s">Java*C12#+ &gt;46</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.05s">JavaS27AE&gt; 3E%</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.10s">JavaSc9=+8 40&amp;</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.15s">JavaScrE&gt;2 /$B</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.20s">JavaScri=&lt; A25</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.25s">JavaScrip1 E9%</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.30s">JavaScript /C7</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.35s">JavaScript 07E</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.40s">JavaScript 1D$</text>
+<text class="f ll" x="720.593" y="131" text-anchor="middle" opacity="0" style="animation-delay:1.45s">JavaScript 104</text>
+<text class="r ll" x="720.593" y="131" text-anchor="middle" style="animation-delay:1.50s">JavaScript 10%</text>
+</svg>

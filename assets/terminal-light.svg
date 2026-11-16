@@ -1,0 +1,699 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" role="img" aria-labelledby="t d" aria-label="What I work on: AI for networks (up): live topology, blast-radius review; agents · prompts · IaC docs. Network experience (up): telemetry agents and scoring; python · influxdb · grafana. Infra as code (up): AWS, NetBox and Grafana as code; cloudformation · ansible · git sync. Off the clock (idle): plane tracking, Folding@home; shooting clays · @SecKC. Talks: secdsm.dec-2025: AI network troubleshooting (C2 detection · VPC flow logs). seckc.sep-2026: AI for network architecture (topology · blast radius · IaC docs). Next talk: not scheduled yet, ask me.">
+<title id="t">What I work on, and my talks</title>
+<desc id="d">What I work on: AI for networks (up): live topology, blast-radius review; agents · prompts · IaC docs. Network experience (up): telemetry agents and scoring; python · influxdb · grafana. Infra as code (up): AWS, NetBox and Grafana as code; cloudformation · ansible · git sync. Off the clock (idle): plane tracking, Folding@home; shooting clays · @SecKC. Talks: secdsm.dec-2025: AI network troubleshooting (C2 detection · VPC flow logs). seckc.sep-2026: AI for network architecture (topology · blast radius · IaC docs). Next talk: not scheduled yet, ask me.</desc>
+<style>
+text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; }
+.sk { font-size: 10px; font-weight: 600; }
+.ll { font-size: 7px; fill: #59636e; }
+.s { font-size: 11px; fill: #59636e; }
+.fv { font-size: 10px; fill: #1f2328; }
+.lb { font-size: 9px; font-weight: 600; letter-spacing: 1px; }
+.v { font-size: 18px; font-weight: 600; fill: #1f2328; }
+.d { font-size: 10px; font-weight: 600; }
+.n { font-size: 9px; fill: #59636e; }
+.up { fill: #1a7f37; } .dn { fill: #d1242f; } .mu { fill: #59636e; }
+.f { animation: flash 0.05s linear; }
+.r { animation: in .01s linear backwards; }
+.b { transform-box: fill-box; transform-origin: 50% 100%; animation: grow .55s cubic-bezier(.16,1,.3,1) backwards; }
+.b.now { animation: grow .55s cubic-bezier(.16,1,.3,1) backwards, breathe 1.6s cubic-bezier(.16,1,.3,1) 2.8s infinite alternate; }
+.lg { transform-box: fill-box; transform-origin: 0 50%; animation: slide .6s cubic-bezier(.16,1,.3,1) backwards; }
+@keyframes flash { from, to { opacity: 1; } }
+@keyframes in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes grow { from { transform: scaleY(0); } }
+@keyframes slide { from { transform: scaleX(0); } }
+@keyframes breathe { to { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<style>
+.c11 { font-size: 11px; }
+.c11b { font-size: 11px; font-weight: 600; }
+.c10 { font-size: 10px; }
+.hd { font-size: 9px; font-weight: 600; letter-spacing: 1px; }
+.led { transform-box: fill-box; transform-origin: center; animation: led .5s cubic-bezier(.16,1,.3,1) backwards; }
+.cur { animation: blink 1s steps(1) 2.6s 4; }
+@keyframes led { 0% { opacity: 0; } 40% { opacity: 1; transform: scale(1.8); } }
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<defs><linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5794F2"/><stop offset="0.333333" stop-color="#1F60C4"/><stop offset="0.666667" stop-color="#8F3BB8"/><stop offset="1" stop-color="#C4306A"/></linearGradient>
+<clipPath id="card"><rect width="760" height="330" rx="8"/></clipPath></defs>
+<g clip-path="url(#card)"><rect width="760" height="330" fill="#ffffff"/>
+<rect width="760" height="30" fill="#d0d7de" opacity=".45"/>
+<rect y="30" width="760" height="1.5" fill="url(#edge)"/></g>
+<circle cx="20" cy="15" r="5.5" fill="#ff5f57"/>
+<circle cx="38" cy="15" r="5.5" fill="#febc2e"/>
+<circle cx="56" cy="15" r="5.5" fill="#28c840"/>
+<text x="380.0" y="19" text-anchor="middle" class="c10" fill="#59636e">skye@fugate: ~ — zsh</text>
+<rect x=".5" y=".5" width="759" height="329" rx="8" fill="none" stroke="#d0d7de"/>
+<line x1="22" x2="738" y1="88.5" y2="88.5" stroke="#d0d7de"/>
+<circle class="led" cx="80" cy="106" r="3.5" fill="#1a7f37" style="animation-delay:0.70s"/>
+<circle class="led" cx="80" cy="126" r="3.5" fill="#1a7f37" style="animation-delay:0.82s"/>
+<circle class="led" cx="80" cy="146" r="3.5" fill="#1a7f37" style="animation-delay:0.94s"/>
+<circle class="led" cx="80" cy="166" r="3.5" fill="#9A6700" style="animation-delay:1.06s"/>
+<rect class="cur" x="121.4" y="302" width="7" height="13" fill="#1f2328"/>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.05s">=&lt;$5#*9&lt;7CA&amp;#8</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.10s">sE3E1A2&gt;#6*%4C</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.15s">skD=&gt;B93334E3&amp;</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.20s">skyE&amp;E86DC#4*F</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.25s">skye%F/A1&lt;&gt;72&lt;</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.30s">skye@C&gt;&gt;15AF=D</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.35s">skye@f*0D&lt;87/2</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.40s">skye@fuB%E8==/</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.45s">skye@fugE//%=8</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.50s">skye@fuga=&amp;&gt;A&amp;</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.55s">skye@fugat30A6</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.60s">skye@fugate%&lt;&gt;</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.65s">skye@fugate:F7</text>
+<text class="f c11b" x="22" y="58" fill="#1F60C4" opacity="0" style="animation-delay:0.70s">skye@fugate:~3</text>
+<text class="r c11b" x="22" y="58" fill="#1F60C4" style="animation-delay:0.75s">skye@fugate:~$</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.08s">3++6 *E%=4=3C%+</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.12s">s6%&amp; &lt;F=66&amp;2F6E</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.18s">shD&gt; E+E&amp;13/%$8</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.23s">sho/ 7&lt;1657326$</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.28s">show E&lt;9/&lt;3=$33</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.33s">show DE5529FC42</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.38s">show iC0E65E&amp;&amp;#</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.43s">show in2*B$*/+B</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.48s">show int#9$&amp;*#$</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.53s">show inte*#1+AE</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.57s">show inter96&gt;&amp;C</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.62s">show interf=5*+</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.68s">show interfa4+#</text>
+<text class="f c11b" x="121.4" y="58" fill="#1f2328" opacity="0" style="animation-delay:0.73s">show interfac1+</text>
+<text class="r c11b" x="121.4" y="58" fill="#1f2328" style="animation-delay:0.78s">show interfaces</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.10s">EA13</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.15s">10#8</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.20s">A18&gt;</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.25s">+&amp;1A</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.30s">PD5/</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.35s">P=#D</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.40s">PC*&gt;</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.45s">PO9B</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.50s">PO$F</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.55s">POB4</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.60s">PO34</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.65s">POR6</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.70s">POR$</text>
+<text class="f hd" x="22" y="82" fill="#59636e" opacity="0" style="animation-delay:0.75s">POR*</text>
+<text class="r hd" x="22" y="82" fill="#59636e" style="animation-delay:0.80s">PORT</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.12s">#8$&amp;&gt;</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.17s">A3$3F</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.23s">BD1+%</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.28s">S7C&lt;4</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.33s">S$0A%</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.38s">S=&gt;AE</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.43s">ST7D*</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.48s">ST#52</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.53s">STA#9</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.57s">STA05</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.62s">STA24</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.68s">STAB&amp;</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.73s">STAT%</text>
+<text class="f hd" x="76" y="82" fill="#59636e" opacity="0" style="animation-delay:0.78s">STAT&lt;</text>
+<text class="r hd" x="76" y="82" fill="#59636e" style="animation-delay:0.83s">STATE</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.15s">627C</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.20s">*E0$</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.25s">+6=7</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.30s">A9C8</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.35s">A$C&gt;</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.40s">A/D9</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.45s">A%3#</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.50s">AR=F</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.55s">ARD3</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.60s">AR&lt;/</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.65s">AR#7</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.70s">ARE7</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.75s">AREA</text>
+<text class="f hd" x="128" y="82" fill="#59636e" opacity="0" style="animation-delay:0.80s">ARE9</text>
+<text class="r hd" x="128" y="82" fill="#59636e" style="animation-delay:0.85s">AREA</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.17s">%$=2C%</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.22s">7*E73/</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.28s">/9=D*3</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.33s">D=&amp;D2A</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.38s">DB05E8</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.42s">DE340=</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.48s">DE96EF</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.53s">DET7%5</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.57s">DET%$8</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.62s">DET&amp;F*</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.68s">DETA+B</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.73s">DETA/7</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.78s">DETAI&amp;</text>
+<text class="f hd" x="262" y="82" fill="#59636e" opacity="0" style="animation-delay:0.82s">DETAID</text>
+<text class="r hd" x="262" y="82" fill="#59636e" style="animation-delay:0.88s">DETAIL</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.20s">07/E6</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.25s">&lt;73&amp;&amp;</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.30s">88/F/</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.35s">S68&lt;$</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.40s">S97%1</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.45s">S2EB&gt;</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.50s">STA&amp;&amp;</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.55s">STC#A</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.60s">STF14</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.65s">STAE%</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.70s">STA2+</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.75s">STAB&amp;</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.80s">STACB</text>
+<text class="f hd" x="516" y="82" fill="#59636e" opacity="0" style="animation-delay:0.85s">STAC*</text>
+<text class="r hd" x="516" y="82" fill="#59636e" style="animation-delay:0.90s">STACK</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.23s">8BB</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.28s">8&gt;+</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.33s">C+C</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.38s">#37</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.43s">0=B</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.48s">a%A</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.53s">a/+</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.58s">a1$</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.62s">aD&gt;</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.68s">a&amp;+</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.73s">ai0</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.78s">ai9</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.83s">ai9</text>
+<text class="f c11b" x="22" y="110" fill="#8F3BB8" opacity="0" style="animation-delay:0.88s">ai/</text>
+<text class="r c11b" x="22" y="110" fill="#8F3BB8" style="animation-delay:0.93s">ai0</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.25s">$C</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.30s">95</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.35s">$7</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.40s">03</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.45s">&gt;9</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.50s">+D</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.55s">/$</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.60s">u=</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.65s">u%</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.70s">u8</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.75s">u0</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.80s">u0</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.85s">uB</text>
+<text class="f c11" x="88" y="110" fill="#59636e" opacity="0" style="animation-delay:0.90s">u1</text>
+<text class="r c11" x="88" y="110" fill="#59636e" style="animation-delay:0.95s">up</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.28s">/4 B=B $%6E&gt;$3+</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.33s">A4 BFD E=4&lt;+15&amp;</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.38s">AI &gt;C2 FF&gt;4E*D/</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.43s">AI +&lt;B 5B2/F3*4</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.48s">AI f43 $+E8F*D4</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.53s">AI fo$ 9=D9&lt;%&amp;C</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.58s">AI for 9*9&amp;C&lt;$F</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.62s">AI for 4E44&amp;D&amp;2</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.68s">AI for nA0+B2$*</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.73s">AI for neB&lt;*8%+</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.78s">AI for net%0B+9</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.83s">AI for netwD142</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.88s">AI for netwo2&amp;F</text>
+<text class="f c11b" x="128" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.93s">AI for networ9F</text>
+<text class="r c11b" x="128" y="110" fill="#1f2328" style="animation-delay:0.98s">AI for networks</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.30s">14A/ 67578/$C&lt; &lt;C%++$&lt;4&gt;4+3 32*34D</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.35s">li&gt;= 1&amp;16*&amp;&lt;+$ /8082+/6E43A &gt;81#F/</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.40s">live AB791&lt;427 BC/*1&gt;EAE130 FFF4D5</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.45s">live to35&lt;C&gt;$6 806F%&gt;///1=# &lt;=17E&amp;</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.50s">live topo50+F0 AF1&gt;CB77CBDE B4#210</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.55s">live topolog%E %4#57#39#&gt;AB =&amp;A+1/</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.60s">live topology, #B31D4C*5D6B D84/34</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.65s">live topology, bl948325%23C &lt;=#08B</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.70s">live topology, blas4586&gt;E02 D+098=</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.75s">live topology, blast-39D%$# #5B6=/</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.80s">live topology, blast-rad3++ %2D0E&lt;</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.85s">live topology, blast-radiu* &lt;C8#D6</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.90s">live topology, blast-radius r$A31%</text>
+<text class="f c11" x="262" y="110" fill="#1f2328" opacity="0" style="animation-delay:0.95s">live topology, blast-radius rev07A</text>
+<text class="r c11" x="262" y="110" fill="#1f2328" style="animation-delay:1.00s">live topology, blast-radius review</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.33s">6A71/B % 2D&amp;0=C1 7 77C 0B*0</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.38s">aDF08&lt; 3 %24&lt;C$3 7 &gt;A&lt; 3#B1</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.43s">age273 4 23&gt;3$63 &amp; $C# /1#E</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.48s">agent&amp; D 2A/54=A C #8A **&amp;*</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.53s">agents $ 2C&lt;78E4 = $A5 C%%3</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.57s">agents · +0D/3B# F =11 &amp;$54</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.62s">agents · pr&lt;9C5/ = &amp;=7 */91</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.68s">agents · prom%7F * 90# 2&gt;&gt;#</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.73s">agents · prompt1 A $1/ *83#</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.78s">agents · prompts 7 53/ *42+</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.82s">agents · prompts · C84 9F&gt;&lt;</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.88s">agents · prompts · Ia+ =/*#</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.93s">agents · prompts · IaC 7C/$</text>
+<text class="f c10" x="516" y="110" fill="#59636e" opacity="0" style="animation-delay:0.98s">agents · prompts · IaC do7/</text>
+<text class="r c10" x="516" y="110" fill="#59636e" style="animation-delay:1.03s">agents · prompts · IaC docs</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.35s">7$/</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.40s">A2%</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.45s">F/9</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.50s">06=</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.55s">$#F</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.60s">n36</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.65s">nA8</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.70s">n&gt;C</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.75s">n/+</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.80s">n#7</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.85s">nx3</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.90s">nxA</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:0.95s">nx2</text>
+<text class="f c11b" x="22" y="130" fill="#C4580E" opacity="0" style="animation-delay:1.00s">nx*</text>
+<text class="r c11b" x="22" y="130" fill="#C4580E" style="animation-delay:1.05s">nx0</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.38s">$C</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.42s">95</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.47s">$7</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.53s">03</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.57s">&gt;9</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.62s">+D</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.68s">/$</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.73s">u=</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.78s">u%</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.82s">u8</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.88s">u0</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.93s">u0</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:0.98s">uB</text>
+<text class="f c11" x="88" y="130" fill="#59636e" opacity="0" style="animation-delay:1.02s">u1</text>
+<text class="r c11" x="88" y="130" fill="#59636e" style="animation-delay:1.08s">up</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.40s">&amp;42B&amp;B% #4&gt;&amp;%5A3E#</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.45s">N0=5D39 6AB4#C6&lt;8+</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.50s">NeC965= 47B/&lt;%3B70</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.55s">Net%&gt;87 DB8CFB*4A$</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.60s">Netwo&gt;B 1$ED2*E*&lt;2</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.65s">Networ/ &gt;=4&gt;/&gt;79$6</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.70s">Network 4E&lt;%141F/%</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.75s">Network e$1&amp;A&gt;4FDF</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.80s">Network ex25&gt;%B914</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.85s">Network exp*%9/&lt;29</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.90s">Network expeCC3&amp;EE</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.95s">Network experi5$%=</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:1.00s">Network experie96&amp;</text>
+<text class="f c11b" x="128" y="130" fill="#1f2328" opacity="0" style="animation-delay:1.05s">Network experienE7</text>
+<text class="r c11b" x="128" y="130" fill="#1f2328" style="animation-delay:1.10s">Network experience</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.42s">#B3+6DF0* 3FFB=% 6+9 %603F$E</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.47s">te1%1$3/+ 55E*+E 7#A 6+9529D</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.53s">tele25$22 D$21B5 &lt;&amp;8 1F2&gt;837</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.57s">teleme4E+ &lt;E*418 #A/ 2E&gt;*4#1</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.62s">telemetr2 $A7&lt;ED 8%$ &gt;+&lt;2$7A</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.68s">telemetry 193E&amp;# /BF 7%82D57</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.73s">telemetry ag*%A= E4A DB+&gt;19F</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.78s">telemetry agen&lt;&lt; 042 E&gt;=99D/</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.82s">telemetry agents D6= F#BED41</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.88s">telemetry agents aD* 1D0$637</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.93s">telemetry agents and B&amp;C47#+</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:0.98s">telemetry agents and s9C2&amp;$9</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:1.03s">telemetry agents and scoC52E</text>
+<text class="f c11" x="262" y="130" fill="#1f2328" opacity="0" style="animation-delay:1.07s">telemetry agents and scori&amp;$</text>
+<text class="r c11" x="262" y="130" fill="#1f2328" style="animation-delay:1.12s">telemetry agents and scoring</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.45s">0D78+5 8 67CA*7FA &amp; /&amp;0FB16</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.50s">p=%6%A 9 00#060+0 = C#9DA7/</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.55s">pyt3*0 % C2&gt;2/=*8 6 /B*+&gt;B5</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.60s">pytho8 A 61&amp;=$*17 2 *#$D/76</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.65s">python $ 70A++F8% F 7A4D7&amp;#</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.70s">python · 66&lt;$E/E&amp; F 9+98$EC</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.75s">python · in731/8&lt; # %B34AA&gt;</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.80s">python · infl+7=% A $195D55</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.85s">python · influx&gt;$ * 7F9/383</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.90s">python · influxdb * %A=CC3&gt;</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:0.95s">python · influxdb · 57F4B/2</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:1.00s">python · influxdb · g+14&amp;8D</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:1.05s">python · influxdb · graEA11</text>
+<text class="f c10" x="516" y="130" fill="#59636e" opacity="0" style="animation-delay:1.10s">python · influxdb · grafa&amp;E</text>
+<text class="r c10" x="516" y="130" fill="#59636e" style="animation-delay:1.15s">python · influxdb · grafana</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.48s">D#69</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.53s">3&amp;1&lt;</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.58s">/669</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.62s">=177</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.68s">iD*8</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.73s">i/45</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.78s">iBC1</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.83s">ia*4</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.88s">ia%+</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.93s">ia7/</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:0.98s">ia0B</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:1.03s">iac1</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:1.08s">iacF</text>
+<text class="f c11b" x="22" y="150" fill="#0B7FA8" opacity="0" style="animation-delay:1.12s">iacD</text>
+<text class="r c11b" x="22" y="150" fill="#0B7FA8" style="animation-delay:1.18s">iac0</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.50s">$C</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.55s">95</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.60s">$7</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.65s">03</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.70s">&gt;9</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.75s">+D</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.80s">/$</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.85s">u=</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.90s">u%</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:0.95s">u8</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:1.00s">u0</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:1.05s">u0</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:1.10s">uB</text>
+<text class="f c11" x="88" y="150" fill="#59636e" opacity="0" style="animation-delay:1.15s">u1</text>
+<text class="r c11" x="88" y="150" fill="#59636e" style="animation-delay:1.20s">up</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.53s">7A*## B0 /D0E</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.58s">816B= 8&lt; 7*AF</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.62s">I$C77 *5 =+81</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.68s">In18% B5 F2/6</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.73s">Inf91 09 CC&gt;&gt;</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.78s">Infr= *D 09+*</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.83s">Infra #6 3&amp;D&lt;</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.88s">Infra &lt;2 &amp;/&lt;3</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.93s">Infra aA 4#&lt;&amp;</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.98s">Infra as B4*=</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:1.02s">Infra as 0&amp;*3</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:1.08s">Infra as c12A</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:1.12s">Infra as co6/</text>
+<text class="f c11b" x="128" y="150" fill="#1f2328" opacity="0" style="animation-delay:1.18s">Infra as cod+</text>
+<text class="r c11b" x="128" y="150" fill="#1f2328" style="animation-delay:1.23s">Infra as code</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.55s">F4&gt;9 $14+&lt;9 &gt;CA +&lt;=&amp;#28 1/ =*/1</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.60s">AW&amp;2 #08F&gt;+ #$7 +6F4&amp;&amp;B B5 8C4D</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.65s">AWS, 30#&gt;5% 4/A *&gt;11&amp;C3 A9 2&amp;&lt;A</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.70s">AWS, N=1%3+ 774 BA&lt;E$&gt;D 4$ 7803</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.75s">AWS, Net=F/ 8#D 41E%9$&gt; &lt;4 *B+8</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.80s">AWS, NetBox &amp;*&gt; F&gt;44&lt;A0 65 B%*D</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.85s">AWS, NetBox a/6 E&gt;/2B3&gt; 0F #15C</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.90s">AWS, NetBox and &lt;1&amp;2/&amp;&lt; 7&amp; 7$9E</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:0.95s">AWS, NetBox and GF9#06C &amp;$ 0/%=</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:1.00s">AWS, NetBox and Gra8&lt;&amp;5 $7 7%0$</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:1.05s">AWS, NetBox and Grafan&lt; 7+ 2876</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:1.10s">AWS, NetBox and Grafana %B 36=$</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:1.15s">AWS, NetBox and Grafana as F92B</text>
+<text class="f c11" x="262" y="150" fill="#1f2328" opacity="0" style="animation-delay:1.20s">AWS, NetBox and Grafana as cE9&amp;</text>
+<text class="r c11" x="262" y="150" fill="#1f2328" style="animation-delay:1.25s">AWS, NetBox and Grafana as code</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:0.58s">**=7E98&lt;=B7D1% &lt; *982A&lt;&amp; &amp; B&gt;F $6&lt;%</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:0.63s">cl61B%B8/A&lt;846 &lt; $FA#E+F * E#D CE&lt;5</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:0.68s">cloudA07%13ACF A 3&gt;AB%8D / #81 &gt;64$</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:0.73s">cloudfo&amp;&lt;4B9F5 6 1%C7*&lt;7 A BD8 E&lt;9%</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:0.78s">cloudforma8&lt;%= / 605&gt;*4&lt; 7 F5F 4006</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:0.83s">cloudformatiD= / 1+B4$E1 3 0EB C6CA</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:0.88s">cloudformation 3 0&lt;&amp;7&lt;#0 F *0C C=&amp;0</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:0.93s">cloudformation · =8&amp;0%&lt;9 * &lt;11 7567</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:0.98s">cloudformation · ans&gt;&lt;D9 / &amp;$$ =CF2</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:1.03s">cloudformation · ansib+8 3 75$ 2D3%</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:1.08s">cloudformation · ansible &amp; =98 /6EF</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:1.12s">cloudformation · ansible · &gt;B&amp; 902A</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:1.18s">cloudformation · ansible · git /8B+</text>
+<text class="f c10" x="516" y="150" fill="#59636e" opacity="0" style="animation-delay:1.23s">cloudformation · ansible · git s&lt;*C</text>
+<text class="r c10" x="516" y="150" fill="#59636e" style="animation-delay:1.28s">cloudformation · ansible · git sync</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:0.60s">%E82</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:0.65s">C*8E</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:0.70s">F32#</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:0.75s">F4FF</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:0.80s">oC=B</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:0.85s">o=58</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:0.90s">o&gt;&amp;F</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:0.95s">of5E</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:1.00s">of91</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:1.05s">of=0</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:1.10s">of1A</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:1.15s">offB</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:1.20s">off6</text>
+<text class="f c11b" x="22" y="170" fill="#C4306A" opacity="0" style="animation-delay:1.25s">off4</text>
+<text class="r c11b" x="22" y="170" fill="#C4306A" style="animation-delay:1.30s">off0</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:0.63s">D522</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:0.68s">&gt;B//</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:0.73s">&lt;D*+</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:0.78s">#08B</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:0.83s">i59D</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:0.88s">iC=D</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:0.93s">i1&gt;C</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:0.98s">id&gt;$</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:1.03s">idA1</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:1.08s">id4/</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:1.12s">id$*</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:1.18s">idl9</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:1.23s">idlB</text>
+<text class="f c11" x="88" y="170" fill="#59636e" opacity="0" style="animation-delay:1.28s">idl7</text>
+<text class="r c11" x="88" y="170" fill="#59636e" style="animation-delay:1.33s">idle</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.65s">1*4 /75 9$5%F</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.70s">#98 F9/ 5&amp;&lt;A/</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.75s">O2B +4/ **=&amp;4</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.80s">Of2 7C7 &amp;F9&amp;7</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.85s">Off 98F 4&lt;1$4</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.90s">Off 1AA 9#68&lt;</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.95s">Off t5F &gt;%$&lt;6</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.00s">Off thC BC&amp;/=</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.05s">Off the DEA&amp;0</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.10s">Off the 100%=</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.15s">Off the c=&lt;EF</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.20s">Off the cl62D</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.25s">Off the clo83</text>
+<text class="f c11b" x="128" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.30s">Off the cloc0</text>
+<text class="r c11b" x="128" y="170" fill="#1f2328" style="animation-delay:1.35s">Off the clock</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.68s">#EBF* 005#AD6&lt;2 5*CA99%&amp;8*0$</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.73s">pl498 5&gt;#&gt;F5273 D7D0E0830DB4</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.78s">planF 70*B/#5$&gt; *1&gt;8%0%367$=</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.83s">plane C9&gt;#%##&gt;4 C&gt;0+F88=49/&gt;</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.88s">plane trE#&gt;89$7 /5*F#&gt;F%9&lt;#E</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.93s">plane trac8&lt;#B1 &lt;99A69&lt;&lt;$A1*</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:0.98s">plane trackiC&gt;3 4649194/&lt;4&amp;&lt;</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.03s">plane tracking6 8C8&amp;0=C*7DB%</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.08s">plane tracking, B163&gt;%06FCBF</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.12s">plane tracking, Fo%D&lt;F#177DC</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.18s">plane tracking, Fold%6&gt;#632#</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.23s">plane tracking, Foldin&amp;&amp;&amp;DF8</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.28s">plane tracking, Folding@%/&gt;E</text>
+<text class="f c11" x="262" y="170" fill="#1f2328" opacity="0" style="animation-delay:1.33s">plane tracking, Folding@hoD/</text>
+<text class="r c11" x="262" y="170" fill="#1f2328" style="animation-delay:1.38s">plane tracking, Folding@home</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:0.70s">/2%=&lt;B0/ /8815 * CA6&amp;04</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:0.75s">sF80B&gt;A6 9#/BA = &amp;16D7&lt;</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:0.80s">sho811+4 6DB2$ / 8*A5C%</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:0.85s">shoo%+E&lt; 5DA&lt;# 3 &lt;&lt;87BE</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:0.90s">shooti/4 C1D2* &lt; &gt;+#3&amp;&gt;</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:0.95s">shooting 69&lt;B2 E 2$0#C0</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:1.00s">shooting *&amp;4/4 B 2=5483</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:1.05s">shooting cl4*9 F 94=%/3</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:1.10s">shooting clayB F &lt;&gt;7&gt;#&lt;</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:1.15s">shooting clays A 2*%&amp;2&lt;</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:1.20s">shooting clays · F$=$&lt;4</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:1.25s">shooting clays · @60=9=</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:1.30s">shooting clays · @S89$$</text>
+<text class="f c10" x="516" y="170" fill="#59636e" opacity="0" style="animation-delay:1.35s">shooting clays · @Sec6&amp;</text>
+<text class="r c10" x="516" y="170" fill="#59636e" style="animation-delay:1.40s">shooting clays · @SecKC</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:0.73s">=&lt;$5#*9&lt;7CA&amp;#8</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:0.78s">sE3E1A2&gt;#6*%4C</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:0.83s">skD=&gt;B93334E3&amp;</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:0.88s">skyE&amp;E86DC#4*F</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:0.93s">skye%F/A1&lt;&gt;72&lt;</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:0.98s">skye@C&gt;&gt;15AF=D</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:1.03s">skye@f*0D&lt;87/2</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:1.08s">skye@fuB%E8==/</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:1.12s">skye@fugE//%=8</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:1.18s">skye@fuga=&amp;&gt;A&amp;</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:1.23s">skye@fugat30A6</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:1.28s">skye@fugate%&lt;&gt;</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:1.33s">skye@fugate:F7</text>
+<text class="f c11b" x="22" y="202" fill="#1F60C4" opacity="0" style="animation-delay:1.38s">skye@fugate:~3</text>
+<text class="r c11b" x="22" y="202" fill="#1F60C4" style="animation-delay:1.43s">skye@fugate:~$</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:0.75s">718E303319 E&amp;B&gt;&lt;</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:0.80s">t8F&amp;/4$5#7 19#1F</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:0.85s">tr3+#BF5E6 8D87=</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:0.90s">tra0&amp;C#E&gt;= &lt;7FE&lt;</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:0.95s">trac0A46=&gt; EC$$6</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:1.00s">trace=D&amp;2&lt; A730#</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:1.05s">tracer/=$&lt; 12+B1</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:1.10s">tracerou*$ F4&amp;5&gt;</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:1.15s">tracerout+ %F#46</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:1.20s">traceroute &amp;FCD7</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:1.25s">traceroute &gt;0FC3</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:1.30s">traceroute t10=4</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:1.35s">traceroute ta#*&lt;</text>
+<text class="f c11b" x="121.4" y="202" fill="#1f2328" opacity="0" style="animation-delay:1.40s">traceroute tal$D</text>
+<text class="r c11b" x="121.4" y="202" fill="#1f2328" style="animation-delay:1.45s">traceroute talks</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:0.78s">&amp;2*B5+7C+E &lt;0 7%5CF63%8C / B$E8 /*8</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:0.83s">tr/&lt;*FB966 E+ =&amp;&gt;+8D4D30 D E&lt;E1 &amp;=*</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:0.88s">trace$/887 +8 89=36E#+EA / 8=B* /F5</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:0.93s">tracero&gt;CF A= +&gt;D43%*=0A % &gt;D21 %B#</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:0.98s">traceroute ## &gt;7DB*AE/%# 8 *239 +3F</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:1.03s">traceroute t5 $&gt;*A&gt;22328 * &amp;8&lt;8 1FE</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:1.08s">traceroute to n1BA$$#A&gt;1 * C694 3ED</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:1.13s">traceroute to nex#//B#C1 C /238 52#</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:1.18s">traceroute to next-t%1#&amp; / BF&amp;&amp; 1$1</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:1.23s">traceroute to next-tal97 % 60&gt;+ D33</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:1.28s">traceroute to next-talk, B +E*1 &gt;6$</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:1.33s">traceroute to next-talk, 3 $&gt;+% $++</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:1.38s">traceroute to next-talk, 3 hopB 2F5</text>
+<text class="f c11" x="22" y="222" fill="#59636e" opacity="0" style="animation-delay:1.43s">traceroute to next-talk, 3 hops #75</text>
+<text class="r c11" x="22" y="222" fill="#59636e" style="animation-delay:1.48s">traceroute to next-talk, 3 hops max</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:0.80s">F</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:0.85s">F</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:0.90s">1</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:0.95s">=</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.00s">3</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.05s">D</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.10s">C</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.15s">9</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.20s">0</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.25s">1</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.30s">0</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.35s">#</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.40s">7</text>
+<text class="f c11" x="30" y="242" fill="#59636e" opacity="0" style="animation-delay:1.45s">$</text>
+<text class="r c11" x="30" y="242" fill="#59636e" style="animation-delay:1.50s">1</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:0.80s">=C&gt;385&gt;32C87830</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:0.85s">sEC=8%%&gt;2#1E9D&amp;</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:0.90s">seD1FF9%A/A&gt;5$C</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:0.95s">sec35F3&amp;/56BB&gt;4</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.00s">secd4F0DBA&amp;#C41</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.05s">secdsAA%&gt;&lt;B#*%1</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.10s">secdsmE6/0+4CA6</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.15s">secdsm.A#*7B#23</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.20s">secdsm.d4&lt;97C/2</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.25s">secdsm.deF61/$9</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.30s">secdsm.decC1A2D</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.35s">secdsm.dec-643+</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.40s">secdsm.dec-2F%B</text>
+<text class="f c11b" x="56" y="242" fill="#C4580E" opacity="0" style="animation-delay:1.45s">secdsm.dec-20*+</text>
+<text class="r c11b" x="56" y="242" fill="#C4580E" style="animation-delay:1.50s">secdsm.dec-2025</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:0.80s">=# &amp;E7&amp;E/C C171&lt;#+//#C&lt;2CB</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:0.85s">A/ *130174 &lt;=A/&amp;0#A9D&gt;/502</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:0.90s">AI F20EE95 60F679&amp;*ED0B2#1</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:0.95s">AI ne17B%&lt; &gt;2#%6D23%6*08E&gt;</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.00s">AI netw538 &gt;1&amp;F*D&gt;#2#C/1$#</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.05s">AI networ7 E*C&amp;8CAE38B3A#B</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.10s">AI network 3/2A*09+$E&gt;1/*/</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.15s">AI network tr57AEA89&lt;+269F</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.20s">AI network troC6D&lt;*&amp;5&amp;%+00</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.25s">AI network troub8$/90B77&gt;&lt;</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.30s">AI network trouble8&lt;F*BA8&amp;</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.35s">AI network troublesh5A6F2F</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.40s">AI network troubleshoo1=&amp;&amp;</text>
+<text class="f c11" x="222" y="242" fill="#1f2328" opacity="0" style="animation-delay:1.45s">AI network troubleshooti&lt;2</text>
+<text class="r c11" x="222" y="242" fill="#1f2328" style="animation-delay:1.50s">AI network troubleshooting</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:0.80s">7A 8D1D&gt;FE$C * CAF *&gt;E5 9D99</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:0.85s">C2 #6D%$=1EA 1 &amp;%+ 7+2% $E20</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:0.90s">C2 dE1&lt;#CCC0 2 F*$ 8E2C 7&lt;AE</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:0.95s">C2 det=+=*F$ 6 &lt;D8 8408 *D40</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.00s">C2 detecB+32 1 67&amp; 6&amp;75 &gt;2#%</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.05s">C2 detecti0$ = 2&gt;/ E/&amp;A AA/=</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.10s">C2 detection B 5A6 /F00 DB8C</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.15s">C2 detection · D7* F%4/ A244</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.20s">C2 detection · V8&amp; 856&amp; +6*D</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.25s">C2 detection · VPC AA/= 5162</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.30s">C2 detection · VPC f+%B CD55</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.35s">C2 detection · VPC flo/ &gt;C=C</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.40s">C2 detection · VPC flow 9#0F</text>
+<text class="f c10" x="516" y="242" fill="#59636e" opacity="0" style="animation-delay:1.45s">C2 detection · VPC flow lo9D</text>
+<text class="r c10" x="516" y="242" fill="#59636e" style="animation-delay:1.50s">C2 detection · VPC flow logs</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:0.80s">%</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:0.85s">+</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:0.90s">A</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:0.95s">&gt;</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.00s">=</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.05s">7</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.10s">1</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.15s">$</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.20s">&gt;</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.25s">A</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.30s">B</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.35s">&gt;</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.40s">+</text>
+<text class="f c11" x="30" y="262" fill="#59636e" opacity="0" style="animation-delay:1.45s">6</text>
+<text class="r c11" x="30" y="262" fill="#59636e" style="animation-delay:1.50s">2</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:0.80s">1&amp;7CC1/74A66$C</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:0.85s">sB84&amp;A#A=&gt;4F%2</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:0.90s">se=5E%*A=D6%61</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:0.95s">sec2&gt;A8253DC#D</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.00s">seck%%$E36C5D9</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.05s">seckc/F&lt;4*+*%9</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.10s">seckc.2&gt;==4=72</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.15s">seckc.s3#4#C=8</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.20s">seckc.se+C3*9/</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.25s">seckc.sep%3BF/</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.30s">seckc.sep-#752</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.35s">seckc.sep-23D6</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.40s">seckc.sep-202/</text>
+<text class="f c11b" x="56" y="262" fill="#0B7FA8" opacity="0" style="animation-delay:1.45s">seckc.sep-202&lt;</text>
+<text class="r c11b" x="56" y="262" fill="#0B7FA8" style="animation-delay:1.50s">seckc.sep-2026</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:0.80s">&amp;5 3F0 %E18/5D EA0+#=DC&lt;%73</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:0.85s">A3 %0$ 096B/E* 6F0A&lt;C*1+E79</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:0.90s">AI 5&gt;+ *1F634D 9E4B%&lt;4&amp;2%&lt;9</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:0.95s">AI fo3 DCFE481 6#=%3868&amp;*8+</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.00s">AI for =D7E4C7 6=&lt;%A&lt;/A*241</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.05s">AI for neE&lt;&amp;&amp;= =*+8D#F/0BC7</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.10s">AI for netwA/D &lt;4&lt;$+*&lt;0$8/%</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.15s">AI for networ1 B$#B5&lt;466*06</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.20s">AI for network 4BB&lt;//59A%0A</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.25s">AI for network ar*7%$32F&lt;1F</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.30s">AI for network archF6=409+6</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.35s">AI for network archit5*5%8D</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.40s">AI for network architec#5#8</text>
+<text class="f c11" x="222" y="262" fill="#1f2328" opacity="0" style="animation-delay:1.45s">AI for network architectu02</text>
+<text class="r c11" x="222" y="262" fill="#1f2328" style="animation-delay:1.50s">AI for network architecture</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:0.80s">7#%2BB89 5 &gt;*0+A A=18C# 0 B=8 FB8E</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:0.85s">to4/06#5 = 6F*3# +C+#+3 F =24 5$#+</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:0.90s">topo1+DC &lt; 4B865 5%A+8&lt; # &lt;31 9#D1</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:0.95s">topologF + 0/#$&amp; 3*/&amp;4$ A #*= /*68</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.00s">topology 0 0$D41 &amp;#&lt;*6= B 582 FEAD</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.05s">topology · bA5AE $AFD%= / =BC 2$&lt;*</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.10s">topology · blaA/ 4D=#4&amp; &gt; $30 $A#B</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.15s">topology · blast 539==% % D/&gt; =+/D</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.20s">topology · blast ra095B B =D&amp; %4&lt;A</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.25s">topology · blast radi%1 4 =DE C%&gt;$</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.30s">topology · blast radius &amp; 4&lt;1 4+1F</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.35s">topology · blast radius · BEF 7/*F</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.40s">topology · blast radius · IaC 54+C</text>
+<text class="f c10" x="516" y="262" fill="#59636e" opacity="0" style="animation-delay:1.45s">topology · blast radius · IaC dF&gt;A</text>
+<text class="r c10" x="516" y="262" fill="#59636e" style="animation-delay:1.50s">topology · blast radius · IaC docs</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:0.80s">E</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:0.85s">&amp;</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:0.90s">8</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:0.95s">/</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.00s">7</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.05s">1</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.10s">&lt;</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.15s">8</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.20s">5</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.25s">E</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.30s">#</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.35s">=</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.40s">&amp;</text>
+<text class="f c11" x="30" y="282" fill="#59636e" opacity="0" style="animation-delay:1.45s">1</text>
+<text class="r c11" x="30" y="282" fill="#59636e" style="animation-delay:1.50s">3</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:0.80s">&gt;  &gt;  8</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:0.85s">3  F  *</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:0.90s">*  C  %</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:0.95s">*  E  C</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.00s">*  E  9</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.05s">*  A  8</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.10s">*  0  8</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.15s">*  5  6</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.20s">*  *  E</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.25s">*  *  /</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.30s">*  *  E</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.35s">*  *  4</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.40s">*  *  &lt;</text>
+<text class="f c11b" x="56" y="282" fill="#59636e" opacity="0" style="animation-delay:1.45s">*  *  7</text>
+<text class="r c11b" x="56" y="282" fill="#59636e" style="animation-delay:1.50s">*  *  *</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:0.80s">7A&gt;CC=1 6F%3D 5=*</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:0.85s">r&lt;F$D%2 E9F=7 3*=</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:0.90s">re/6%&gt;7 5F9$E $83</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:0.95s">req74A7 A*D#* 9B2</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.00s">requ&lt;+D 9A7*9 29#</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.05s">reques+ $&lt;=+C E5&gt;</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.10s">request $#$D4 4D/</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.15s">request 7/*B&amp; 3==</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.20s">request t0#F4 5#3</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.25s">request ti3+/ %6=</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.30s">request time&lt; +C+</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.35s">request timed 6&gt;1</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.40s">request timed 0D#</text>
+<text class="f c11" x="222" y="282" fill="#59636e" opacity="0" style="animation-delay:1.45s">request timed oEE</text>
+<text class="r c11" x="222" y="282" fill="#59636e" style="animation-delay:1.50s">request timed out</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:0.80s">+0/8 = 492F8 A/* =A</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:0.85s">w#&gt;3 # C+2D0 E87 &amp;&amp;</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:0.90s">wa%B 3 DD+C9 #7/ &amp;7</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:0.95s">want 8 B=26% E&lt;A 5$</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.00s">want * =C&lt;35 7D= &lt;9</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.05s">want a &gt;5C%9 0C6 95</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.10s">want a t&gt;F*8 0#1 C*</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.15s">want a ta=&lt;3 49A F8</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.20s">want a tal#&lt; &gt;/0 4$</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.25s">want a talk? 4$4 21</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.30s">want a talk? 7E/ %/</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.35s">want a talk? a&amp;B B2</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.40s">want a talk? ask 2%</text>
+<text class="f c10" x="516" y="282" fill="#C4306A" opacity="0" style="animation-delay:1.45s">want a talk? ask B%</text>
+<text class="r c10" x="516" y="282" fill="#C4306A" style="animation-delay:1.50s">want a talk? ask me</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:0.80s">=&lt;$5#*9&lt;7CA&amp;#8</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:0.85s">sE3E1A2&gt;#6*%4C</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:0.90s">skD=&gt;B93334E3&amp;</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:0.95s">skyE&amp;E86DC#4*F</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.00s">skye%F/A1&lt;&gt;72&lt;</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.05s">skye@C&gt;&gt;15AF=D</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.10s">skye@f*0D&lt;87/2</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.15s">skye@fuB%E8==/</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.20s">skye@fugE//%=8</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.25s">skye@fuga=&amp;&gt;A&amp;</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.30s">skye@fugat30A6</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.35s">skye@fugate%&lt;&gt;</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.40s">skye@fugate:F7</text>
+<text class="f c11b" x="22" y="312" fill="#1F60C4" opacity="0" style="animation-delay:1.45s">skye@fugate:~3</text>
+<text class="r c11b" x="22" y="312" fill="#1F60C4" style="animation-delay:1.50s">skye@fugate:~$</text>
+</svg>
