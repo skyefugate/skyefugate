@@ -10,6 +10,15 @@
 [![SecKC](https://img.shields.io/badge/@SecKC-B877D9?style=for-the-badge&logo=hackthebox&logoColor=white)](https://github.com/SecKC)
 ![Location](https://img.shields.io/badge/South_of_North-73BF69?style=for-the-badge&logo=googlemaps&logoColor=white)
 
+<!-- board:start -->
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/board-narrow-dark.svg?v=20261116">
+  <source media="(max-width: 600px)" srcset="assets/board-narrow-light.svg?v=20261116">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/board-wide-dark.svg?v=20261116">
+  <img src="assets/board-wide-light.svg?v=20261116" alt="Last 12 months: 58 contributions, 43 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers, 0 stars. Current streak 2 days, longest 3, active 15 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 47%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%." width="760">
+</picture>
+<!-- board:end -->
+
 </div>
 
 ---
@@ -26,9 +35,3 @@
 <p align="center">
   <img src="https://skillicons.dev/icons?i=py,bash,aws,docker,linux,ansible,grafana,cloudflare,git,kotlin,js,html&perline=12" alt="tools"/>
 </p>
-
-<img src="assets/stats.svg" alt="GitHub stats" width="760">
-
-<img src="assets/languages.svg" alt="Languages" width="760">
-
-<img src="assets/activity.svg" alt="Weekly activity" width="760">

@@ -2,17 +2,25 @@
 """Build the profile graphics as local SVGs (no third-party image services).
 
 Run from the repo root:  python3 .assets/build.py
-Writes assets/banner.svg, assets/focus.svg and assets/talks.svg.
-Every SVG carries its own light/dark CSS, so it reads well in both GitHub themes.
+Writes assets/banner.svg, focus.svg and talks.svg (light/dark CSS inside each),
+plus the stats board in four variants, assets/board-{wide,narrow}-{dark,light}.svg
+(see board.py). Yesterday's numbers live in .assets/state.json so the board can
+show change since the last run, and the README <picture> block is rewritten
+with a fresh ?v= stamp.
 """
 
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 from collections import Counter
+from datetime import date, datetime, timedelta, timezone
 from html import escape
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+import board
 
 OUT = Path(__file__).resolve().parent.parent / "assets"
 
@@ -157,7 +165,12 @@ FOCUS = [
         "cloudformation · ansible · git sync",
         PURPLE,
     ),
-    ("Off the clock", "Plane tracking, Folding@home", "trapshooting · @SecKC", ORANGE),
+    (
+        "Off the clock",
+        "Plane tracking, Folding@home",
+        "shooting clays · @SecKC",
+        ORANGE,
+    ),
 ]
 
 TALKS = [
@@ -176,16 +189,11 @@ TALKS = [
 ]
 
 USER = "skyefugate"
-LANG_COLORS = {
-    "Python": BLUE,
-    "Shell": GREEN,
-    "HTML": ORANGE,
-    "JavaScript": YELLOW,
-    "Kotlin": PURPLE,
-    "Ruby": RED,
-    "CSS": BLUE_L,
-    "TypeScript": "#3178C6",
-}
+LOCAL = ZoneInfo("America/Chicago")  # commit hours are shown in my time zone
+ROOT = OUT.parent
+STATE = ROOT / ".assets" / "state.json"
+README = ROOT / "README.md"
+MARK_START, MARK_END = "<!-- board:start -->", "<!-- board:end -->"
 
 
 def gh(*args: str):
@@ -194,136 +202,186 @@ def gh(*args: str):
     )
 
 
-def fetch() -> dict:
-    """Live data from GitHub. Only totals leave this function: no repo names.
+def contributor_count(repo: str) -> int:
+    """Distinct contributors to a public repo, read from the REST pagination
+    header (one contributor per page, so the last page number is the count)."""
+    out = subprocess.run(
+        ["gh", "api", "-i", f"repos/{repo}/contributors?per_page=1&anon=true"],
+        capture_output=True,
+        text=True,
+    ).stdout
+    m = re.search(r'page=(\d+)>; rel="last"', out)
+    return int(m.group(1)) if m else (1 if out.strip() else 0)
+
+
+def fetch(today: date) -> dict:
+    """Live data from GitHub.
 
     Public repos only, so a run on my Mac and the daily run on GitHub (which
-    only has the built-in token) draw the same numbers. Contribution counts
-    still include private work when "Include private contributions" is on.
+    only has the built-in token) draw the same numbers, and no repo name shown
+    can ever be a private one. Every search carries is:public for the same
+    reason. Contribution counts still include private work when "Include
+    private contributions" is on.
+
+    Commit hours and line counts come from my own commits on the default
+    branch of my public repos; bot commits (the nightly refresh) are skipped.
     """
-    q = (
-        """{ user(login: "%s") {
+    me = f"author:{USER} is:public"
+    q = """query($login: String!, $from: DateTime!,
+                 $prs: String!, $merged: String!, $iss: String!, $issC: String!, $rev: String!) {
+      prs: search(query: $prs, type: ISSUE) { issueCount }
+      merged: search(query: $merged, type: ISSUE, first: 100) { issueCount
+        nodes { ... on PullRequest { createdAt mergedAt } } }
+      iss: search(query: $iss, type: ISSUE) { issueCount }
+      issC: search(query: $issC, type: ISSUE) { issueCount }
+      rev: search(query: $rev, type: ISSUE) { issueCount }
+      user(login: $login) {
+      createdAt followers { totalCount }
       contributionsCollection { totalCommitContributions totalPullRequestContributions
-        contributionCalendar { totalContributions weeks { contributionDays { contributionCount } } } }
-      repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) { totalCount
-        nodes { languages(first: 10) { edges { size node { name } } } } } } }"""
-        % USER
-    )
-    u = gh("api", "graphql", "-f", f"query={q}")["data"]["user"]
+        totalPullRequestReviewContributions totalIssueContributions
+        totalRepositoriesWithContributedCommits
+        commitContributionsByRepository(maxRepositories: 100) {
+          repository { nameWithOwner name isPrivate owner { login } } contributions { totalCount } }
+        pullRequestContributionsByRepository(maxRepositories: 100) {
+          repository { nameWithOwner name isPrivate owner { login } } contributions { totalCount } }
+        issueContributionsByRepository(maxRepositories: 100) {
+          repository { nameWithOwner name isPrivate owner { login } } contributions { totalCount } }
+        contributionCalendar { totalContributions
+          weeks { contributionDays { date weekday contributionCount } } } }
+      recent: contributionsCollection(from: $from) {
+        commitContributionsByRepository(maxRepositories: 25) {
+          repository { name isPrivate } contributions { totalCount } } }
+      repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) {
+        totalCount nodes {
+          name createdAt stargazerCount
+          languages(first: 10) { edges { size node { name } } }
+          defaultBranchRef { target { ... on Commit {
+            history(first: 100) {
+              nodes { authoredDate additions deletions author { user { login } } } } } } } } } } }"""
+    since = (today - timedelta(days=90)).isoformat() + "T00:00:00Z"
+    year_ago = today - timedelta(days=365)
+    args = {
+        "login": USER,
+        "from": since,
+        "prs": f"{me} is:pr",
+        "merged": f"{me} is:pr is:merged",
+        "iss": f"{me} is:issue",
+        "issC": f"{me} is:issue is:closed",
+        "rev": f"reviewed-by:{USER} -author:{USER} is:pr is:merged is:public",
+    }
+    flags = [x for k, v in args.items() for x in ("-f", f"{k}={v}")]
+    data = gh("api", "graphql", "-f", f"query={q}", *flags)["data"]
+    u = data["user"]
     cc = u["contributionsCollection"]
+    weeks_raw = cc["contributionCalendar"]["weeks"]
+    cal = [d for w in weeks_raw for d in w["contributionDays"]]
+    days = [d["contributionCount"] for d in cal]
+    weeks = [
+        sum(d["contributionCount"] for d in w["contributionDays"]) for w in weeks_raw
+    ]
+
     langs = Counter()
+    hours, added, removed, n_commits = [], 0, 0, 0
+    commit_days: dict[str, list[str]] = {}
+    repo_langs = []
     for repo in u["repositories"]["nodes"]:
+        names = [e["node"]["name"] for e in repo["languages"]["edges"]]
+        repo_langs.append((repo["createdAt"][:10], names))
         for e in repo["languages"]["edges"]:
             langs[e["node"]["name"]] += e["size"]
-    weeks = [
-        sum(d["contributionCount"] for d in w["contributionDays"])
-        for w in cc["contributionCalendar"]["weeks"]
+        ref = repo["defaultBranchRef"]
+        for c in ref["target"]["history"]["nodes"] if ref else []:
+            if (c["author"]["user"] or {}).get("login") != USER:
+                continue
+            at = datetime.fromisoformat(c["authoredDate"].replace("Z", "+00:00"))
+            commit_days.setdefault(repo["name"], []).append(at.date().isoformat())
+            if at.date() < year_ago:
+                continue
+            hours.append(at.astimezone(LOCAL).hour)
+            added += c["additions"]
+            removed += c["deletions"]
+            n_commits += 1
+    top = langs.most_common(6)
+    total = sum(v for _, v in top) or 1
+    public = [
+        (r["repository"]["name"], r["contributions"]["totalCount"])
+        for r in u["recent"]["commitContributionsByRepository"]
+        if not r["repository"]["isPrivate"]
     ]
+
+    # contributions this year, by public repo, split into mine vs other people's
+    by_repo = Counter()
+    for kind in (
+        "commitContributionsByRepository",
+        "pullRequestContributionsByRepository",
+        "issueContributionsByRepository",
+    ):
+        for r in cc[kind]:
+            if not r["repository"]["isPrivate"]:
+                by_repo[r["repository"]["nameWithOwner"]] += r["contributions"][
+                    "totalCount"
+                ]
+    external = {k: v for k, v in by_repo.items() if not k.startswith(f"{USER}/")}
+    crowd = [(name, contributor_count(name)) for name in by_repo]
+    crowd = [c for c in crowd if c[1]]
+    team = max(crowd, key=lambda c: c[1]) if crowd else None
+
+    mins = [
+        (
+            datetime.fromisoformat(n["mergedAt"].replace("Z", "+00:00"))
+            - datetime.fromisoformat(n["createdAt"].replace("Z", "+00:00"))
+        ).total_seconds()
+        / 60
+        for n in data["merged"]["nodes"]
+        if n
+    ]
+    joined = datetime.fromisoformat(u["createdAt"].replace("Z", "+00:00")).date()
+    dated = [(d["date"], d["contributionCount"]) for d in cal]
     return {
+        "today": today.isoformat(),
         "total": cc["contributionCalendar"]["totalContributions"],
         "commits": cc["totalCommitContributions"],
         "prs": cc["totalPullRequestContributions"],
+        "reviews": cc["totalPullRequestReviewContributions"],
+        "issues": cc["totalIssueContributions"],
+        "repos_touched": cc["totalRepositoriesWithContributedCommits"],
+        "followers": u["followers"]["totalCount"],
+        "stars": sum(r["stargazerCount"] for r in u["repositories"]["nodes"]),
         "repos": u["repositories"]["totalCount"],
-        "langs": langs,
+        "lang_count": len(langs),
+        "streak": board.streak(days),
+        "longest": board.longest_streak(days),
+        "active": board.active_days(days),
+        "best": board.best_day(dated),
+        "weekdays": board.weekday_split(
+            [(d["weekday"], d["contributionCount"]) for d in cal]
+        ),
+        "chrono": board.chronotype(hours),
+        "lines": (added, removed) if n_commits else None,
+        "avg_commit": (added + removed) / n_commits if n_commits else None,
+        "since": joined.year,
+        "years": (today - joined).days // 365,
         "weeks": weeks,
+        "busiest": max(public, key=lambda r: r[1]) if public else None,
+        "langs": [(k, v / total * 100) for k, v in top],
+        "merged": (data["merged"]["issueCount"], data["prs"]["issueCount"]),
+        "merge_mins": board.median(mins),
+        "issues_closed": (data["issC"]["issueCount"], data["iss"]["issueCount"]),
+        "review_karma": data["rev"]["issueCount"],
+        "field_trips": (sum(external.values()), len(external)),
+        "team_player": (team[0].split("/")[1], team[1]) if team else None,
+        "longest_break": board.longest_break(days),
+        "comeback": board.comeback(weeks),
+        "peak_month": board.peak_month(dated),
+        "necro": board.necromancer(commit_days, today.isoformat()),
+        "side_quest": board.new_languages(repo_langs, year_ago.isoformat()),
     }
 
 
-def stats(d: dict) -> str:
-    W, pad, gap, n = 760, 20, 16, 4
-    bw = (W - 2 * pad - gap * (n - 1)) / n
-    tiles = [
-        ("CONTRIBUTIONS", d["total"], "last 12 months", BLUE),
-        ("COMMITS", d["commits"], "last 12 months", GREEN),
-        ("PULL REQUESTS", d["prs"], "last 12 months", PURPLE),
-        ("PUBLIC REPOS", d["repos"], "built from scratch", ORANGE),
-    ]
-    out = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="150" viewBox="0 0 {W} 150" role="img" aria-label="GitHub stats">',
-        STYLE,
-        f'<text class="t" x="{pad}" y="28">By the numbers</text>',
-    ]
-    for i, (k, v, sub, c) in enumerate(tiles):
-        x = pad + i * (bw + gap)
-        out += [
-            f'<rect class="card" x="{x:g}" y="44" width="{bw:g}" height="92" rx="8"/>',
-            f'<rect x="{x:g}" y="44" width="{bw:g}" height="4" rx="2" fill="{c}"/>',
-            f'<text class="k" x="{x + 16:g}" y="72">{k}</text>',
-            f'<text x="{x + 16:g}" y="106" style="font:700 30px -apple-system,Segoe UI,Helvetica,Arial,sans-serif" fill="{c}">{v}</text>',
-            f'<text class="m" x="{x + 16:g}" y="126">{sub}</text>',
-        ]
-    out.append("</svg>\n")
-    return "\n".join(out)
-
-
-def languages(d: dict) -> str:
-    W, pad = 760, 20
-    top = d["langs"].most_common(6)
-    total = sum(v for _, v in top) or 1
-    out = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="120" viewBox="0 0 {W} 120" role="img" aria-label="Languages">',
-        STYLE,
-        f'<text class="t" x="{pad}" y="28">Languages</text>',
-        f'<clipPath id="bar"><rect x="{pad}" y="44" width="{W - 2 * pad}" height="14" rx="7"/></clipPath><g clip-path="url(#bar)">',
-    ]
-    x, legend = pad, []
-    for i, (name, v) in enumerate(top):
-        w = (W - 2 * pad) * v / total
-        c = LANG_COLORS.get(name, PALETTE[i % len(PALETTE)])
-        out.append(f'<rect x="{x:g}" y="44" width="{w + 1:g}" height="14" fill="{c}"/>')
-        x += w
-        legend.append((name, v / total * 100, c))
-    out.append("</g>")
-    col = (W - 2 * pad) / 3
-    for i, (name, pct, c) in enumerate(legend):
-        lx, ly = pad + (i % 3) * col, 84 + (i // 3) * 22
-        out += [
-            f'<circle cx="{lx + 6:g}" cy="{ly - 4}" r="5" fill="{c}"/>',
-            f'<text class="l" x="{lx + 18:g}" y="{ly}">{escape(name)} <tspan class="m">{pct:.1f}%</tspan></text>',
-        ]
-    out.append("</svg>\n")
-    return "\n".join(out).replace(
-        'height="120" viewBox="0 0 760 120"',
-        f'height="{84 + 22 * ((len(legend) + 2) // 3)}" viewBox="0 0 760 {84 + 22 * ((len(legend) + 2) // 3)}"',
-    )
-
-
-def activity(d: dict) -> str:
-    W, H, pad, top, bot = 760, 220, 20, 50, 190
-    weeks = d["weeks"]
-    peak = max(weeks) or 1
-    step = (W - 2 * pad) / max(len(weeks) - 1, 1)
-    pts = [(pad + i * step, bot - (bot - top) * v / peak) for i, v in enumerate(weeks)]
-    line = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
-    area = (
-        f"M{pad},{bot} L"
-        + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
-        + f" L{W - pad},{bot} Z"
-    )
-    dots = "".join(
-        f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.5" fill="{PURPLE}"/>'
-        for (x, y), v in zip(pts, weeks)
-        if v
-    )
-    grid = "".join(
-        f'<line x1="{pad}" x2="{W - pad}" y1="{bot - (bot - top) * f:.1f}" y2="{bot - (bot - top) * f:.1f}" class="grid"/>'
-        for f in (0, 0.5, 1)
-    )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Weekly activity">
-{STYLE}
-<defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{BLUE}" stop-opacity=".45"/><stop offset="1" stop-color="{BLUE}" stop-opacity="0"/></linearGradient>
-<linearGradient id="ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{BLUE_L}"/><stop offset=".5" stop-color="{BLUE}"/><stop offset="1" stop-color="{PURPLE}"/></linearGradient></defs>
-<style>.grid {{ stroke: #d0d7de; stroke-dasharray: 3 4; }} @media (prefers-color-scheme: dark) {{ .grid {{ stroke: #30363d; }} }}</style>
-<text class="t" x="{pad}" y="28">Activity</text>
-<text class="m" x="{W - pad}" y="28" text-anchor="end">contributions per week · peak {peak}</text>
-{grid}
-<path d="{area}" fill="url(#fill)"/>
-<polyline points="{line}" fill="none" stroke="url(#ln)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-{dots}
-<text class="m" x="{pad}" y="{H - 10}">12 months ago</text>
-<text class="m" x="{W - pad}" y="{H - 10}" text-anchor="end">now</text>
-</svg>
-"""
+def update_readme(block: str) -> None:
+    text = README.read_text()
+    a, b = text.index(MARK_START), text.index(MARK_END)
+    README.write_text(text[: a + len(MARK_START)] + "\n" + block + "\n" + text[b:])
 
 
 if __name__ == "__main__":
@@ -331,8 +389,22 @@ if __name__ == "__main__":
     (OUT / "banner.svg").write_text(banner())
     (OUT / "focus.svg").write_text(cards("What I work on", FOCUS))
     (OUT / "talks.svg").write_text(cards("Talks", TALKS))
-    data = fetch()
-    (OUT / "stats.svg").write_text(stats(data))
-    (OUT / "languages.svg").write_text(languages(data))
-    (OUT / "activity.svg").write_text(activity(data))
+
+    today = datetime.now(timezone.utc).date()
+    data = fetch(today)
+    state = json.loads(STATE.read_text()) if STATE.exists() else None
+    base = board.baseline(state, data["today"])
+    values = {k: data[k] for k in board.DELTA_KEYS}
+    dl = board.deltas(values, base)
+    for size in ("wide", "narrow"):
+        for theme in ("dark", "light"):
+            (OUT / f"board-{size}-{theme}.svg").write_text(
+                board.render(data, dl, base, size == "wide", theme)
+            )
+    STATE.write_text(
+        json.dumps(board.next_state(state, data["today"], values), indent=2) + "\n"
+    )
+    update_readme(
+        board.picture(data["today"].replace("-", ""), board.summary(data, dl, base))
+    )
     print("wrote", ", ".join(p.name for p in sorted(OUT.glob("*.svg"))))

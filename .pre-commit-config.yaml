@@ -44,3 +44,9 @@ repos:
         language: system
         pass_filenames: false
         files: ^\.assets/
+      - id: board-tests
+        name: board unit tests
+        entry: python3 -m unittest discover -s .assets
+        language: system
+        pass_filenames: false
+        files: ^\.assets/
