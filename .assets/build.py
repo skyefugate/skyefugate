@@ -2,8 +2,8 @@
 """Build the profile graphics as local SVGs (no third-party image services).
 
 Run from the repo root:  python3 .assets/build.py
-Writes assets/banner.svg, focus.svg and talks.svg (light/dark CSS inside each),
-plus the stats board in four variants, assets/board-{wide,narrow}-{dark,light}.svg
+Writes assets/banner.svg (light/dark CSS inside), the focus and talks cards
+(cards.py, dark and light files), plus the stats board in four variants, assets/board-{wide,narrow}-{dark,light}.svg
 (see board.py). Yesterday's numbers live in .assets/state.json so the board can
 show change since the last run, and the README <picture> block is rewritten
 with a fresh ?v= stamp.
@@ -16,11 +16,11 @@ import re
 import subprocess
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
-from html import escape
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import board
+import cards
 
 OUT = Path(__file__).resolve().parent.parent / "assets"
 
@@ -47,21 +47,6 @@ FONT = {  # 5x5 pixel letters
     "A": [".###.", "#...#", "#####", "#...#", "#...#"],
     "T": ["#####", "..#..", "..#..", "..#..", "..#.."],
 }
-
-STYLE = """<style>
-  .t { font: 600 15px -apple-system, Segoe UI, Helvetica, Arial, sans-serif; fill: #1f2328; }
-  .h { font: 600 14px -apple-system, Segoe UI, Helvetica, Arial, sans-serif; fill: #1f2328; }
-  .l { font: 12px -apple-system, Segoe UI, Helvetica, Arial, sans-serif; fill: #424a53; }
-  .m { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #59636e; }
-  .k { font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #59636e; letter-spacing: 2px; }
-  .card { fill: #f6f8fa; stroke: #d0d7de; }
-  @media (prefers-color-scheme: dark) {
-    .t, .h { fill: #e6edf3; }
-    .l { fill: #c9d1d9; }
-    .m, .k { fill: #9198a1; }
-    .card { fill: #161b22; stroke: #30363d; }
-  }
-</style>"""
 
 
 def wordmark(text: str, x0: float, y0: float, cw: int, ch: int) -> str:
@@ -121,79 +106,11 @@ def banner() -> str:
 """
 
 
-def cards(title: str, items: list[tuple[str, str, str, str]], cols: int = 2) -> str:
-    """items: (heading, line1, line2, color). Cards with a color stripe, like the EIT page."""
-    W, pad, gap, ch = 760, 20, 20, 92
-    cwid = (W - 2 * pad - gap * (cols - 1)) / cols
-    rows = (len(items) + cols - 1) // cols
-    H = 50 + rows * (ch + gap)
-    out = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{escape(title)}">',
-        STYLE,
-        f'<text class="t" x="{pad}" y="28">{escape(title)}</text>',
-    ]
-    for i, (head, l1, l2, color) in enumerate(items):
-        x = pad + (i % cols) * (cwid + gap)
-        y = 44 + (i // cols) * (ch + gap)
-        out += [
-            f'<rect class="card" x="{x:g}" y="{y}" width="{cwid:g}" height="{ch}" rx="8"/>',
-            f'<rect x="{x:g}" y="{y}" width="6" height="{ch}" rx="3" fill="{color}"/>',
-            f'<text class="h" x="{x + 20:g}" y="{y + 30}">{escape(head)}</text>',
-            f'<text class="l" x="{x + 20:g}" y="{y + 54}">{escape(l1)}</text>',
-            f'<text class="m" x="{x + 20:g}" y="{y + 74}">{escape(l2)}</text>',
-        ]
-    out.append("</svg>\n")
-    return "\n".join(out)
-
-
-FOCUS = [
-    (
-        "AI for networks",
-        "Live topology, blast-radius review",
-        "agents · prompts · IaC docs",
-        BLUE,
-    ),
-    (
-        "Network experience",
-        "Telemetry agents and scoring",
-        "python · influxdb · grafana",
-        GREEN,
-    ),
-    (
-        "Infra as code",
-        "AWS, NetBox and Grafana as code",
-        "cloudformation · ansible · git sync",
-        PURPLE,
-    ),
-    (
-        "Off the clock",
-        "Plane tracking, Folding@home",
-        "shooting clays · @SecKC",
-        ORANGE,
-    ),
-]
-
-TALKS = [
-    (
-        "SecKC · Sep 2026",
-        "AI for network architecture",
-        "topology · blast radius · IaC docs",
-        BLUE,
-    ),
-    (
-        "SecDSM · Dec 2025",
-        "AI network troubleshooting",
-        "C2 detection · VPC flow logs",
-        PURPLE,
-    ),
-]
-
 USER = "skyefugate"
 LOCAL = ZoneInfo("America/Chicago")  # commit hours are shown in my time zone
 ROOT = OUT.parent
 STATE = ROOT / ".assets" / "state.json"
 README = ROOT / "README.md"
-MARK_START, MARK_END = "<!-- board:start -->", "<!-- board:end -->"
 
 
 def gh(*args: str):
@@ -378,17 +295,19 @@ def fetch(today: date) -> dict:
     }
 
 
-def update_readme(block: str) -> None:
+def update_readme(block: str, name: str = "board") -> None:
+    start, end = f"<!-- {name}:start -->", f"<!-- {name}:end -->"
     text = README.read_text()
-    a, b = text.index(MARK_START), text.index(MARK_END)
-    README.write_text(text[: a + len(MARK_START)] + "\n" + block + "\n" + text[b:])
+    a, b = text.index(start), text.index(end)
+    README.write_text(text[: a + len(start)] + "\n" + block + "\n" + text[b:])
 
 
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "banner.svg").write_text(banner())
-    (OUT / "focus.svg").write_text(cards("What I work on", FOCUS))
-    (OUT / "talks.svg").write_text(cards("Talks", TALKS))
+    for theme in ("dark", "light"):
+        (OUT / f"focus-{theme}.svg").write_text(cards.focus(theme))
+        (OUT / f"talks-{theme}.svg").write_text(cards.talks(theme))
 
     today = datetime.now(timezone.utc).date()
     data = fetch(today)
@@ -403,6 +322,19 @@ if __name__ == "__main__":
             )
     STATE.write_text(
         json.dumps(board.next_state(state, data["today"], values), indent=2) + "\n"
+    )
+    v = data["today"].replace("-", "")
+    update_readme(
+        cards.picture(
+            "focus",
+            "What I work on: AI for networks, network experience, infra as code, off the clock",
+            v,
+        ),
+        "focus",
+    )
+    update_readme(
+        cards.picture("talks", "Talks at SecDSM (Dec 2025) and SecKC (Sep 2026)", v),
+        "talks",
     )
     update_readme(
         board.picture(data["today"].replace("-", ""), board.summary(data, dl, base))

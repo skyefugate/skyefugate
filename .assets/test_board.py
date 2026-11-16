@@ -4,6 +4,7 @@ import unittest
 import xml.etree.ElementTree as ET
 
 import board
+import cards
 
 NS = "{http://www.w3.org/2000/svg}"
 
@@ -242,6 +243,27 @@ class Render(unittest.TestCase):
         p = board.picture("20261116", "alt")
         self.assertLess(p.index("narrow-dark"), p.index("wide-dark"))
         self.assertEqual(p.count("?v=20261116"), 4)
+
+
+class Cards(unittest.TestCase):
+    def test_cards_finished_by_default(self):
+        for theme in ("dark", "light"):
+            for svg in (cards.focus(theme), cards.talks(theme)):
+                root = ET.fromstring(svg)
+                texts = list(root.iter(NS + "text"))
+                real = [t for t in texts if t.get("class", "").startswith("r ")]
+                self.assertTrue(real)
+                self.assertTrue(all(t.get("opacity") is None for t in real))
+                self.assertIn("prefers-reduced-motion", svg)
+
+    def test_card_content(self):
+        shown = {t.text for t in ET.fromstring(cards.focus("dark")).iter(NS + "text")}
+        for want in ("show interfaces", "AI for networks", "shooting clays · @SecKC"):
+            self.assertTrue(any(want in s for s in shown if s), want)
+        talks = cards.talks("light")
+        for want in ("SecDSM · Dec 2025", "SecKC · Sep 2026", "*  *  *"):
+            self.assertIn(want, talks)
+        self.assertEqual(cards.picture("talks", "a", "1").count("talks-"), 2)
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/board-narrow-dark.svg?v=20261116">
   <source media="(max-width: 600px)" srcset="assets/board-narrow-light.svg?v=20261116">
   <source media="(prefers-color-scheme: dark)" srcset="assets/board-wide-dark.svg?v=20261116">
-  <img src="assets/board-wide-light.svg?v=20261116" alt="Last 12 months: 58 contributions, 43 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers, 0 stars. Current streak 2 days, longest 3, active 15 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 47%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%." width="760">
+  <img src="assets/board-wide-light.svg?v=20261116" alt="Last 12 months: 60 contributions, 45 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers, 0 stars. Current streak 2 days, longest 3, active 15 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%." width="760">
 </picture>
 <!-- board:end -->
 
@@ -23,9 +23,19 @@
 
 ---
 
-<img src="assets/focus.svg" alt="What I work on: AI for networks, network experience, infra as code, off the clock" width="760">
+<!-- focus:start -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/focus-dark.svg?v=20261116">
+  <img src="assets/focus-light.svg?v=20261116" alt="What I work on: AI for networks, network experience, infra as code, off the clock" width="760">
+</picture>
+<!-- focus:end -->
 
-<img src="assets/talks.svg" alt="Talks at SecKC and SecDSM" width="760">
+<!-- talks:start -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/talks-dark.svg?v=20261116">
+  <img src="assets/talks-light.svg?v=20261116" alt="Talks at SecDSM (Dec 2025) and SecKC (Sep 2026)" width="760">
+</picture>
+<!-- talks:end -->
 
 - **SecKC, Sep 2026:** [AI for network architecture](https://github.com/skyefugate/2026-09-SecKC-AI-Talk)
 - **SecDSM, Dec 2025:** [AI network troubleshooting](https://github.com/skyefugate/2025-12-SecDSM-AI-Talk)
