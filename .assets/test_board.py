@@ -245,25 +245,41 @@ class Render(unittest.TestCase):
         self.assertEqual(p.count("?v=20261116"), 4)
 
 
-class Cards(unittest.TestCase):
-    def test_cards_finished_by_default(self):
+class Terminal(unittest.TestCase):
+    def test_finished_by_default(self):
         for theme in ("dark", "light"):
-            for svg in (cards.focus(theme), cards.talks(theme)):
-                root = ET.fromstring(svg)
-                texts = list(root.iter(NS + "text"))
-                real = [t for t in texts if t.get("class", "").startswith("r ")]
-                self.assertTrue(real)
-                self.assertTrue(all(t.get("opacity") is None for t in real))
-                self.assertIn("prefers-reduced-motion", svg)
+            svg = cards.terminal(theme)
+            root = ET.fromstring(svg)
+            real = [
+                t for t in root.iter(NS + "text") if t.get("class", "").startswith("r ")
+            ]
+            self.assertTrue(real)
+            self.assertTrue(all(t.get("opacity") is None for t in real))
+            self.assertIn("prefers-reduced-motion", svg)
 
-    def test_card_content(self):
-        shown = {t.text for t in ET.fromstring(cards.focus("dark")).iter(NS + "text")}
-        for want in ("show interfaces", "AI for networks", "shooting clays · @SecKC"):
-            self.assertTrue(any(want in s for s in shown if s), want)
-        talks = cards.talks("light")
-        for want in ("SecDSM · Dec 2025", "SecKC · Sep 2026", "*  *  *"):
-            self.assertIn(want, talks)
-        self.assertEqual(cards.picture("talks", "a", "1").count("talks-"), 2)
+    def test_one_session_with_both_commands(self):
+        root = ET.fromstring(cards.terminal("dark"))
+        shown = [
+            t.text
+            for t in root.iter(NS + "text")
+            if t.get("class", "").startswith("r ")
+        ]
+        self.assertEqual(shown.count("skye@fugate:~$"), 3)
+        for want in (
+            "show interfaces",
+            "traceroute talks",
+            "AI for networks",
+            "seckc.sep-2026",
+            "*  *  *",
+        ):
+            self.assertIn(want, shown)
+        self.assertEqual(cards.picture("terminal", "a", "1").count("terminal-"), 2)
+
+    def test_cursor_settles(self):
+        svg = cards.terminal("light")
+        self.assertIn(".cur { animation: blink 1s steps(1) 2.6s 4; }", svg)
+        self.assertEqual(svg.count('class="cur"'), 1)
+        self.assertNotIn('class="b now"', svg)
 
 
 if __name__ == "__main__":

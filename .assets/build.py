@@ -2,7 +2,7 @@
 """Build the profile graphics as local SVGs (no third-party image services).
 
 Run from the repo root:  python3 .assets/build.py
-Writes assets/banner.svg (light/dark CSS inside), the focus and talks cards
+Writes assets/banner.svg (light/dark CSS inside), the terminal card
 (cards.py, dark and light files), plus the stats board in four variants, assets/board-{wide,narrow}-{dark,light}.svg
 (see board.py). Yesterday's numbers live in .assets/state.json so the board can
 show change since the last run, and the README <picture> block is rewritten
@@ -306,8 +306,7 @@ if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "banner.svg").write_text(banner())
     for theme in ("dark", "light"):
-        (OUT / f"focus-{theme}.svg").write_text(cards.focus(theme))
-        (OUT / f"talks-{theme}.svg").write_text(cards.talks(theme))
+        (OUT / f"terminal-{theme}.svg").write_text(cards.terminal(theme))
 
     today = datetime.now(timezone.utc).date()
     data = fetch(today)
@@ -326,15 +325,11 @@ if __name__ == "__main__":
     v = data["today"].replace("-", "")
     update_readme(
         cards.picture(
-            "focus",
-            "What I work on: AI for networks, network experience, infra as code, off the clock",
+            "terminal",
+            "What I work on (show interfaces) and my talks at SecDSM Dec 2025 and SecKC Sep 2026 (traceroute)",
             v,
         ),
-        "focus",
-    )
-    update_readme(
-        cards.picture("talks", "Talks at SecDSM (Dec 2025) and SecKC (Sep 2026)", v),
-        "talks",
+        "terminal",
     )
     update_readme(
         board.picture(data["today"].replace("-", ""), board.summary(data, dl, base))
