@@ -72,7 +72,7 @@ LANG_COLORS = {
     "PowerShell": "#012456",
 }
 
-DELTA_KEYS = ("total", "commits", "prs", "reviews", "issues", "followers")
+DELTA_KEYS = ("total", "commits", "prs", "reviews", "issues", "followers", "stars")
 
 
 # ---------- numbers ----------
@@ -148,6 +148,87 @@ def fmt_k(n: int) -> str:
     return f"{n / 1000:.1f}k" if n >= 1000 else str(n)
 
 
+def longest_break(days: list[int]) -> int:
+    best = cur = 0
+    for c in days:
+        cur = 0 if c else cur + 1
+        best = max(best, cur)
+    return best
+
+
+def comeback(weeks: list[int], quiet_min: int = 2) -> tuple[int, int] | None:
+    """Biggest week that followed at least quiet_min empty weeks.
+    -> (count, quiet weeks before it)."""
+    best, quiet = None, 0
+    for v in weeks:
+        if v and quiet >= quiet_min and (best is None or v >= best[0]):
+            best = (v, quiet)
+        quiet = 0 if v else quiet + 1
+    return best
+
+
+def peak_month(dated: list[tuple[str, int]]) -> tuple[str, int] | None:
+    """dated: (YYYY-MM-DD, count) -> ("Sep '26", total) for the busiest month."""
+    by = Counter()
+    for day, c in dated:
+        by[day[:7]] += c
+    if not by or not max(by.values()):
+        return None
+    ym, n = max(by.items(), key=lambda kv: (kv[1], kv[0]))
+    months = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
+    return f"{months[int(ym[5:]) - 1]} '{ym[2:4]}", n
+
+
+def median(xs: list[float]) -> float | None:
+    s = sorted(xs)
+    if not s:
+        return None
+    m = len(s) // 2
+    return s[m] if len(s) % 2 else (s[m - 1] + s[m]) / 2
+
+
+def fmt_dur(minutes: float) -> str:
+    if minutes < 60:
+        return f"{minutes:.0f}m"
+    if minutes < 48 * 60:
+        return f"{minutes / 60:.0f}h"
+    return f"{minutes / 1440:.0f}d"
+
+
+def necromancer(
+    commits: dict[str, list[str]], today: str, min_gap: int = 30
+) -> tuple[str, int] | None:
+    """commits: repo -> my commit dates (YYYY-MM-DD). The repo with the longest
+    nap that I came back to within the last year. -> (repo, days asleep)."""
+    from datetime import date
+
+    t = date.fromisoformat(today)
+    best = None
+    for repo, ds in commits.items():
+        s = sorted(date.fromisoformat(x) for x in set(ds))
+        for a, b in zip(s, s[1:]):
+            gap = (b - a).days
+            if (t - b).days <= 365 and gap >= min_gap and (not best or gap > best[1]):
+                best = (repo, gap)
+    return best
+
+
+def new_languages(repos: list[tuple[str, list[str]]], since: str) -> list[str]:
+    """repos: (createdAt YYYY-MM-DD, languages). Languages first seen in a repo
+    created on or after since, in the order they first appear."""
+    old = {lang for created, langs in repos if created < since for lang in langs}
+    out = []
+    for created, langs in sorted(repos):
+        for lang in langs:
+            if created >= since and lang not in old and lang not in out:
+                out.append(lang)
+    return out
+
+
+def trunc(s: str, n: int) -> str:
+    return s if len(s) <= n else s[: max(n - 1, 1)] + "\u2026"
+
+
 def baseline(state: dict | None, today: str) -> dict | None:
     """The snapshot to diff against. A second run on the same day keeps the
     earlier baseline, so re-running never zeroes the change."""
@@ -219,11 +300,14 @@ class Board:
         size: float,
         end: bool = False,
         fill: str | None = None,
+        mid: bool = False,
     ) -> float:
         """One decoding line. Returns the line's estimated width in px."""
         start = 0.05 + min(self.lines, 30) * 0.025
         self.lines += 1
-        anchor = ' text-anchor="end"' if end else ""
+        anchor = (
+            ' text-anchor="end"' if end else (' text-anchor="middle"' if mid else "")
+        )
         paint = f' fill="{fill}"' if fill else ""
         pos = f'x="{x:g}" y="{y:g}"{anchor}{paint}'
         for i, f in enumerate(frames(s)):
@@ -240,7 +324,8 @@ class Board:
         t = self.t
         return f"""<style>
 text {{ font-family: {MONO}; }}
-.fk {{ font-size: 10px; font-weight: 600; }}
+.sk {{ font-size: 9px; font-weight: 600; }}
+.ll {{ font-size: 8px; fill: {t["mu"]}; }}
 .s {{ font-size: 11px; fill: {t["mu"]}; }}
 .fv {{ font-size: 10px; fill: {t["fg"]}; }}
 .lb {{ font-size: 9px; font-weight: 600; letter-spacing: 1px; }}
@@ -264,10 +349,11 @@ text {{ font-family: {MONO}; }}
 
 # ---------- layout ----------
 
+SHORT_LANG = {"JavaScript": "JS", "TypeScript": "TS", "PowerShell": "PS"}
+
 
 def tiles(d: dict, dl: dict) -> list[tuple[str, str, int | None, str]]:
     """(label, value, delta, note). Labels are short so 6 fit across."""
-    best = d.get("best")
     return [
         ("CONTRIBS", str(d["total"]), dl.get("total"), ""),
         ("COMMITS", str(d["commits"]), dl.get("commits"), ""),
@@ -277,45 +363,129 @@ def tiles(d: dict, dl: dict) -> list[tuple[str, str, int | None, str]]:
         ("FOLLOWERS", str(d["followers"]), dl.get("followers"), ""),
         ("STREAK", f"{d['streak']}d", None, f"max {d['longest']}"),
         ("ACTIVE", f"{d['active']}/365", None, ""),
-        ("BEST DAY", str(best[0]) if best else "0", None, best[1][5:] if best else ""),
-        ("REPOS", str(d["repos_touched"]), None, "touched"),
+        ("STARS", str(d["stars"]), dl.get("stars"), ""),
         ("PUBLIC", str(d["repos"]), None, "repos"),
         ("LANGS", str(d["lang_count"]), None, ""),
+        ("MERGED", str(d["merged"][0]), None, "PRs"),
     ]
 
 
-def facts(d: dict) -> list[tuple[str, list[tuple[str, str]]]]:
-    """(key, [(text, class)]): short lines, some with coloured segments."""
+def superlatives(d: dict, room: int) -> list[tuple[str, list[tuple[str, str]], str]]:
+    """(name, [(text, kind)], meaning). kind: v plain, up/dn coloured, mu missing.
+    room = max characters for the value. meaning goes into the alt text."""
     out = []
-    if d.get("busiest"):
-        name, n = d["busiest"]
-        out.append(
-            (
-                "BUSIEST 90D",
-                [(f"{name} \u00b7 {n} commit{'s' if n != 1 else ''}", "fv")],
-            )
-        )
-    ct = d.get("chrono")
-    if ct:
-        out.append(
-            ("PEAK HOUR", [(f"{fmt_hour(ct[0])} \u00b7 {ct[1]} ({ct[2]:.0f}%)", "fv")])
-        )
+
+    def add(name, value, meaning):
+        segs = value if isinstance(value, list) else [(value, "v")]
+        if value is None:
+            segs = [("not yet", "mu")]
+        out.append((name, segs, meaning))
+
+    def pct(pair):
+        n, of = pair
+        return f"{n / of * 100:.0f}% \u00b7 {n}/{of}" if of else None
+
+    def named(name, suffix):
+        return trunc(name, room - len(suffix)) + suffix
+
+    add("Ship It", pct(d["merged"]), "share of my public PRs that merged")
+    mm = d.get("merge_mins")
+    add(
+        "Merge Speed",
+        fmt_dur(mm) if mm is not None else None,
+        "median time from PR open to merge",
+    )
+    rk = d.get("review_karma")
+    add("Review Karma", f"{rk} merged" if rk else None, "PRs I reviewed that merged")
+    add(
+        "Actually Done", pct(d["issues_closed"]), "share of my public issues now closed"
+    )
+    ft = d.get("field_trips")
+    add(
+        "Field Trips",
+        f"{ft[0]} in {ft[1]} repo{'s' if ft[1] != 1 else ''}" if ft and ft[0] else None,
+        "contributions to repos I don't own",
+    )
+    tp = d.get("team_player")
+    add(
+        "Team Player",
+        named(tp[0], f" \u00b7 {tp[1]}") if tp else None,
+        "repo I touched with the most contributors",
+    )
+    add(
+        "Tab Hoarder",
+        f"{d['repos_touched']} repos",
+        "distinct repos committed to this year",
+    )
+    sq = d.get("side_quest") or []
+    add(
+        "Side Quest",
+        f"+{len(sq)} \u00b7 {sq[0]}" if sq else None,
+        "languages new this year",
+    )
+    best = d.get("best")
+    add(
+        "Absolute Menace",
+        f"{best[0]} on {best[1][5:]}" if best else None,
+        "busiest single day",
+    )
+    pm = d.get("peak_month")
+    add("Peak Era", f"{pm[0]} \u00b7 {pm[1]}" if pm else None, "busiest month")
     wk = d.get("weekdays")
-    if wk:
-        out.append(
-            ("FAVOURITE DAY", [(f"{wk[0]} \u00b7 {wk[1]:.0f}% of the year", "fv")])
-        )
-        out.append(("WEEKENDS", [(f"{wk[2]:.0f}% of contributions", "fv")]))
-    lines = d.get("lines")
-    if lines:
-        out.append(
-            (
-                "LINES",
-                [(f"+{fmt_k(lines[0])}", "up"), (f"\u2212{fmt_k(lines[1])}", "dn")],
-            )
-        )
-    if d.get("since"):
-        out.append(("JOINED", [(f"{d['since']} \u00b7 {d['years']} yrs ago", "fv")]))
+    add(
+        "Weekend Mode",
+        f"{wk[2]:.0f}%" if wk else None,
+        "share of contributions on weekends",
+    )
+    ct = d.get("chrono")
+    add(
+        ct[1].title() if ct else "Night Owl",
+        f"{fmt_hour(ct[0])} \u00b7 {ct[2]:.0f}%" if ct else None,
+        "peak commit hour, Central time",
+    )
+    lb = d.get("longest_break")
+    add(
+        "Touch Grass",
+        f"{lb}d off" if lb else None,
+        "longest stretch with no contributions",
+    )
+    cb = d.get("comeback")
+    add(
+        "Redemption Arc",
+        f"{cb[0]} after {cb[1]}w off" if cb else None,
+        "biggest week after a quiet spell",
+    )
+    nc = d.get("necro")
+    add(
+        "Necromancer",
+        named(nc[0], f" \u00b7 {nc[1]}d") if nc else None,
+        "repo revived after the longest nap, in days",
+    )
+    ln = d.get("lines")
+    add(
+        "Refactor Energy",
+        f"{ln[1] / ln[0] * 100:.0f}% churn" if ln and ln[0] else None,
+        "lines removed per 100 added",
+    )
+    add(
+        "Lines",
+        [(f"+{fmt_k(ln[0])}", "up"), (f"\u2212{fmt_k(ln[1])}", "dn")] if ln else None,
+        "lines added and removed",
+    )
+    bz = d.get("busiest")
+    add(
+        "Main Character",
+        named(bz[0], "") if bz else None,
+        "busiest public repo, last 90 days",
+    )
+    add("Fav Day", wk[0] if wk else None, "weekday with the most contributions")
+    ac = d.get("avg_commit")
+    add(
+        "Chonky Commits",
+        f"avg {ac:.0f} lines" if ac else None,
+        "average lines changed per commit",
+    )
+    add("Day One", str(d["since"]) if d.get("since") else None, "year I joined")
     return out
 
 
@@ -333,56 +503,24 @@ def summary(d: dict, dl: dict, base: dict | None) -> str:
         f"{d['reviews']} reviews{chg('reviews')}",
         f"{d['issues']} issues{chg('issues')}",
         f"{d['followers']} followers{chg('followers')}",
+        f"{d['stars']} stars{chg('stars')}",
     ]
     s = (
         f"Last 12 months: {', '.join(parts)}. "
         f"Current streak {d['streak']} day{'s' if d['streak'] != 1 else ''}, "
         f"longest {d['longest']}, active {d['active']} of 365 days, "
-        f"{d['repos_touched']} repos touched, {d['repos']} public repos, "
-        f"{d['lang_count']} languages used."
+        f"{d['repos']} public repos, {d['lang_count']} languages."
     )
-    if d.get("best"):
-        s += f" Best day {d['best'][1]} with {d['best'][0]}."
-    for key, segs in facts(d):
-        s += f" {key.capitalize()}: {' '.join(t for t, _ in segs)}."
+    for name, segs, meaning in superlatives(d, 40):
+        s += f" {name} ({meaning}): {' '.join(t for t, _ in segs)}."
     if d.get("langs"):
         s += " Languages: " + ", ".join(f"{k} {p:.0f}%" for k, p in d["langs"]) + "."
     return s
 
 
-def fact_groups(d: dict) -> list[list[tuple[str, str]]]:
-    """The fun facts as short (text, kind) runs. kind: 'k' accent, 'v' plain,
-    'up'/'dn' for lines added/removed. One group per fact."""
-    out = []
-    ct = d.get("chrono")
-    if ct:
-        out.append([(ct[1], "k"), (fmt_hour(ct[0]), "v")])
-    wk = d.get("weekdays")
-    if wk:
-        out.append([("fav day", "k"), (wk[0], "v")])
-        out.append([("weekends", "k"), (f"{wk[2]:.0f}%", "v")])
-    lines = d.get("lines")
-    if lines:
-        out.append(
-            [
-                ("lines", "k"),
-                (f"+{fmt_k(lines[0])}", "up"),
-                (f"\u2212{fmt_k(lines[1])}", "dn"),
-            ]
-        )
-    if d.get("busiest"):
-        name = d["busiest"][0]
-        out.append(
-            [("busiest", "k"), (name if len(name) <= 24 else name[:23] + "…", "v")]
-        )
-    if d.get("since"):
-        out.append([("joined", "k"), (str(d["since"]), "v")])
-    return out
-
-
 def render(d: dict, dl: dict, base: dict | None, wide: bool, theme: str) -> str:
     """A compact strip meant to sit under the banner, centred."""
-    W, H = (760, 128) if wide else (480, 252)
+    W, H = (760, 226) if wide else (480, 404)
     pad = 20
     b = Board(W, H, theme)
     t = b.t
@@ -426,43 +564,43 @@ def render(d: dict, dl: dict, base: dict | None, wide: bool, theme: str) -> str:
     b.text("weekly \u00b7 12 mo", bx, base_y + 14, "n", 9)
     b.text(f"peak {peak}", bx + bw, base_y + 14, "n", 9, end=True)
 
-    # fun facts, centred: one line on wide, two on narrow
-    groups = fact_groups(d)
-    lines = [groups] if wide else [groups[:3], groups[3:]]
-    fy = H - 16 - 16 * (len(lines) - 1)
-    size, gap, sep = 10, 6, "  \u00b7  "
-    k = 0
-    for line in lines:
-        widths = [
-            sum(len(s) * size * CHAR for s, _ in g) + gap * (len(g) - 1) for g in line
-        ]
-        total = sum(widths) + len(sep) * size * CHAR * (len(line) - 1)
-        x = (W - total) / 2
-        for gi, g in enumerate(line):
-            if gi:
-                x += (
-                    b.text(sep.strip(), x + size * CHAR * 2, fy, "n", size)
-                    + size * CHAR * 4
-                )
-            for s, kind in g:
-                if kind == "k":
-                    fill, cls = acc[k % len(acc)], "fk"
-                    k += 1
-                else:
-                    fill, cls = None, "fv" if kind == "v" else f"fv {kind}"
-                x += b.text(s, x, fy, cls, size, fill=fill) + gap
-            x -= gap
-        fy += 16
+    # superlatives: name left, value right-aligned, 3 columns wide / 2 narrow
+    scols = 3 if wide else 2
+    colw = (W - 2 * pad) / scols
+    room = int((colw - 14 - 15 * 9 * CHAR - 10) / (10 * CHAR))
+    sy0 = (base_y + 40) if not wide else 112
+    rule = sy0 - 14
+    for i, (name, segs, _) in enumerate(superlatives(d, room)):
+        x, y = pad + (i % scols) * colw, sy0 + (i // scols) * 15
+        b.text(name, x, y, "sk", 9, fill=acc[i % len(acc)])
+        right = x + colw - 14
+        for text, kind in reversed(segs):
+            cls = "fv" if kind == "v" else ("n" if kind == "mu" else f"fv {kind}")
+            right -= b.text(text, right, y, cls, 10, end=True) + 6
 
-    # language bar along the bottom edge
-    segs, x = [], 1.0
+    # language labels in small grey type, then the colour strip on the bottom edge
+    segs, labels, x = [], [], 1.0
     for i, (name, pct) in enumerate(d.get("langs", [])):
         w = (W - 2) * pct / 100
         c = LANG_COLORS.get(name, t["mu"])
         segs.append(
             f'<rect class="lg" x="{x:.1f}" y="{H - 4}" width="{w + 0.5:.1f}" height="3" fill="{c}" style="animation-delay:{1.7 + i * 0.08:.2f}s"/>'
         )
+        labels.append(
+            ([f"{name} {pct:.0f}%", f"{SHORT_LANG.get(name, name)} {pct:.0f}%"], x, w)
+        )
         x += w
+    edge = 0.0
+    for options, sx, w in labels:
+        for label in options:  # full name first, then the short one
+            half = len(label) * 8 * CHAR / 2 + 3
+            if 2 * half > w + 8:
+                continue
+            cx = min(max(sx + w / 2, 6 + half), W - 6 - half)
+            if cx - half >= edge:
+                b.text(label, cx, H - 10, "ll", 8, mid=True)
+                edge = cx + half
+                break  # if none fit, the alt text still lists it
 
     g = t["grad"]
     stops = "".join(
@@ -489,6 +627,7 @@ def render(d: dict, dl: dict, base: dict | None, wide: bool, theme: str) -> str:
             "</g>",
             f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="8" fill="none" stroke="{t["line"]}"/>',
             f'<line x1="{bx}" x2="{bx + bw}" y1="{base_y + 0.5}" y2="{base_y + 0.5}" stroke="{t["line"]}"/>',
+            f'<line x1="{pad}" x2="{W - pad}" y1="{rule}" y2="{rule}" stroke="{t["line"]}" stroke-dasharray="2 3"/>',
             *bars,
             *b.body,
             "</svg>",

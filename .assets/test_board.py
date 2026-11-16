@@ -30,8 +30,23 @@ DATA = {
     "weeks": [0] * 50 + [4, 9, 2],
     "busiest": ("2026-09-SecKC-AI-Talk", 17),
     "langs": [("Python", 48.0), ("HTML", 16.0), ("Shell", 11.0)],
+    "stars": 0,
+    "avg_commit": 600.0,
+    "merged": (7, 9),
+    "merge_mins": 131,
+    "issues_closed": (10, 11),
+    "review_karma": 1,
+    "field_trips": (8, 5),
+    "team_player": ("devicetype-library", 908),
+    "longest_break": 41,
+    "comeback": (26, 5),
+    "peak_month": ("Sep '26", 31),
+    "necro": ("2025-12-SecDSM-AI-Talk", 214),
+    "side_quest": ["Kotlin", "Ruby"],
 }
-BASE_VALUES = dict(total=54, commits=41, prs=6, reviews=0, issues=2, followers=6)
+BASE_VALUES = dict(
+    total=54, commits=41, prs=6, reviews=0, issues=2, followers=6, stars=0
+)
 
 
 class Numbers(unittest.TestCase):
@@ -64,6 +79,47 @@ class Numbers(unittest.TestCase):
         self.assertEqual(board.fmt_hour(21), "9 pm")
         self.assertEqual(board.fmt_k(8846), "8.8k")
 
+    def test_longest_break_and_comeback(self):
+        self.assertEqual(board.longest_break([1, 0, 0, 0, 1, 0]), 3)
+        self.assertEqual(board.comeback([5, 0, 0, 3, 0, 0, 0, 3, 9]), (3, 3))
+        self.assertIsNone(board.comeback([1, 0, 2]))
+
+    def test_peak_month_and_median(self):
+        self.assertEqual(
+            board.peak_month([("2026-09-01", 4), ("2026-09-20", 3), ("2026-10-01", 6)]),
+            ("Sep '26", 7),
+        )
+        self.assertEqual(board.median([5, 1, 3]), 3)
+        self.assertEqual(board.median([1, 2, 3, 10]), 2.5)
+        self.assertEqual(board.fmt_dur(12), "12m")
+        self.assertEqual(board.fmt_dur(131), "2h")
+        self.assertEqual(board.fmt_dur(36925), "26d")
+
+    def test_necromancer_needs_a_recent_return(self):
+        c = {
+            "old": ["2024-01-01", "2024-09-01"],
+            "back": ["2026-01-01", "2026-06-01", "2026-06-02"],
+        }
+        self.assertEqual(board.necromancer(c, "2026-11-16"), ("back", 151))
+        self.assertIsNone(
+            board.necromancer({"x": ["2026-11-01", "2026-11-02"]}, "2026-11-16")
+        )
+
+    def test_new_languages(self):
+        repos = [
+            ("2024-01-01", ["Python"]),
+            ("2026-03-01", ["Python", "Go"]),
+            ("2026-05-01", ["Ruby", "Go"]),
+        ]
+        self.assertEqual(board.new_languages(repos, "2025-11-16"), ["Go", "Ruby"])
+
+    def test_missing_superlative_says_not_yet(self):
+        d = dict(DATA, merge_mins=None, team_player=None)
+        rows = {n: segs for n, segs, _ in board.superlatives(d, 20)}
+        self.assertEqual(rows["Merge Speed"], [("not yet", "mu")])
+        self.assertEqual(rows["Team Player"], [("not yet", "mu")])
+        self.assertEqual(len(rows), 21)
+
     def test_active_days_window(self):
         self.assertEqual(board.active_days([1] * 10 + [0, 2], window=3), 2)
 
@@ -86,6 +142,7 @@ class Numbers(unittest.TestCase):
                 "reviews": None,
                 "issues": None,
                 "followers": None,
+                "stars": None,
             },
         )
         self.assertEqual(board.fmt_delta(5), ("+5", "up"))
@@ -147,10 +204,23 @@ class Render(unittest.TestCase):
             "3d",
             "max 4",
             "14/365",
-            "09-12",
-            "evening coder",
-            "9 pm",
+            "26 on 09-12",
+            "Evening Coder",
+            "9 pm \u00b7 46%",
             "Sat",
+            "Ship It",
+            "78% \u00b7 7/9",
+            "2h",
+            "91% \u00b7 10/11",
+            "8 in 5 repos",
+            "devicetype-libr\u2026 \u00b7 908",
+            "2025-12-SecDSM\u2026 \u00b7 214d",
+            "41d off",
+            "26 after 5w off",
+            "Sep '26 \u00b7 31",
+            "+2 \u00b7 Kotlin",
+            "9% churn",
+            "Python 48%",
             "38%",
             "+8.8k",
             "\u2212802",
@@ -174,7 +244,7 @@ class Render(unittest.TestCase):
             "streak 3 days",
             "longest 4",
             "14 of 365",
-            "evening coder",
+            "Evening Coder",
             "2026-09-SecKC-AI-Talk",
         ):
             self.assertIn(want, desc)
