@@ -240,13 +240,13 @@ class Board:
         t = self.t
         return f"""<style>
 text {{ font-family: {MONO}; }}
-.h {{ font-size: 15px; font-weight: 700; letter-spacing: 1px; }}
+.fk {{ font-size: 10px; font-weight: 600; }}
 .s {{ font-size: 11px; fill: {t["mu"]}; }}
-.fv {{ font-size: 11px; fill: {t["fg"]}; }}
-.lb {{ font-size: 10px; font-weight: 600; letter-spacing: 1px; }}
-.v {{ font-size: 22px; font-weight: 600; fill: {t["fg"]}; }}
-.d {{ font-size: 12px; font-weight: 600; }}
-.n {{ font-size: 10px; fill: {t["mu"]}; }}
+.fv {{ font-size: 10px; fill: {t["fg"]}; }}
+.lb {{ font-size: 9px; font-weight: 600; letter-spacing: 1px; }}
+.v {{ font-size: 18px; font-weight: 600; fill: {t["fg"]}; }}
+.d {{ font-size: 10px; font-weight: 600; }}
+.n {{ font-size: 9px; fill: {t["mu"]}; }}
 .up {{ fill: {t["up"]}; }} .dn {{ fill: {t["dn"]}; }} .mu {{ fill: {t["mu"]}; }}
 .f {{ animation: flash {STEP}s linear; }}
 .r {{ animation: in .01s linear backwards; }}
@@ -266,21 +266,21 @@ text {{ font-family: {MONO}; }}
 
 
 def tiles(d: dict, dl: dict) -> list[tuple[str, str, int | None, str]]:
-    """(label, value, delta, note)"""
+    """(label, value, delta, note). Labels are short so 6 fit across."""
     best = d.get("best")
     return [
-        ("CONTRIBUTIONS", str(d["total"]), dl.get("total"), ""),
+        ("CONTRIBS", str(d["total"]), dl.get("total"), ""),
         ("COMMITS", str(d["commits"]), dl.get("commits"), ""),
-        ("PULL REQUESTS", str(d["prs"]), dl.get("prs"), ""),
+        ("PRS", str(d["prs"]), dl.get("prs"), ""),
         ("REVIEWS", str(d["reviews"]), dl.get("reviews"), ""),
         ("ISSUES", str(d["issues"]), dl.get("issues"), ""),
-        ("STREAK", f"{d['streak']} d", None, f"best {d['longest']} d"),
-        ("ACTIVE DAYS", f"{d['active']}/365", None, ""),
-        ("BEST DAY", str(best[0]) if best else "0", None, best[1][5:] if best else ""),
-        ("REPOS TOUCHED", str(d["repos_touched"]), None, ""),
         ("FOLLOWERS", str(d["followers"]), dl.get("followers"), ""),
-        ("PUBLIC REPOS", str(d["repos"]), None, ""),
-        ("LANGUAGES", str(d["lang_count"]), None, "used"),
+        ("STREAK", f"{d['streak']}d", None, f"max {d['longest']}"),
+        ("ACTIVE", f"{d['active']}/365", None, ""),
+        ("BEST DAY", str(best[0]) if best else "0", None, best[1][5:] if best else ""),
+        ("REPOS", str(d["repos_touched"]), None, "touched"),
+        ("PUBLIC", str(d["repos"]), None, "repos"),
+        ("LANGS", str(d["lang_count"]), None, ""),
     ]
 
 
@@ -350,90 +350,119 @@ def summary(d: dict, dl: dict, base: dict | None) -> str:
     return s
 
 
+def fact_groups(d: dict) -> list[list[tuple[str, str]]]:
+    """The fun facts as short (text, kind) runs. kind: 'k' accent, 'v' plain,
+    'up'/'dn' for lines added/removed. One group per fact."""
+    out = []
+    ct = d.get("chrono")
+    if ct:
+        out.append([(ct[1], "k"), (fmt_hour(ct[0]), "v")])
+    wk = d.get("weekdays")
+    if wk:
+        out.append([("fav day", "k"), (wk[0], "v")])
+        out.append([("weekends", "k"), (f"{wk[2]:.0f}%", "v")])
+    lines = d.get("lines")
+    if lines:
+        out.append(
+            [
+                ("lines", "k"),
+                (f"+{fmt_k(lines[0])}", "up"),
+                (f"\u2212{fmt_k(lines[1])}", "dn"),
+            ]
+        )
+    if d.get("busiest"):
+        name = d["busiest"][0]
+        out.append(
+            [("busiest", "k"), (name if len(name) <= 24 else name[:23] + "…", "v")]
+        )
+    if d.get("since"):
+        out.append([("joined", "k"), (str(d["since"]), "v")])
+    return out
+
+
 def render(d: dict, dl: dict, base: dict | None, wide: bool, theme: str) -> str:
-    W, H = (760, 330) if wide else (480, 588)
+    """A compact strip meant to sit under the banner, centred."""
+    W, H = (760, 128) if wide else (480, 252)
     pad = 20
     b = Board(W, H, theme)
     t = b.t
     acc = t["acc"]
 
-    b.text("skyefugate", pad, 32, "h", 15, fill="url(#hg)")
-    right = "last 12 months"
-    if base:
-        right += f" \u00b7 \u0394 since {base['date'][5:]}"
-    b.text(right, W - pad, 32, "s", 11, end=True)
-
-    # tiles: 5 across on wide, 3 across on narrow
-    cols = 6 if wide else 3
-    span = (W - 2 * pad) / cols
-    deco = []
+    # stat grid: 6 x 2 on wide (left of the bars), 4 x 3 on narrow
+    cols = 6 if wide else 4
+    gw = 504 if wide else W - 2 * pad
+    span = gw / cols
     ts = tiles(d, dl)
     for i, (label, value, delta, note) in enumerate(ts):
-        x, y = pad + (i % cols) * span, 66 + (i // cols) * 62
-        c = acc[i % len(acc)]
-        deco.append(
-            f'<rect x="{x:g}" y="{y - 16}" width="18" height="3" rx="1.5" fill="{c}"/>'
-        )
-        b.text(label, x, y, "lb", 10, fill=c)
-        vw = b.text(value, x, y + 26, "v", 22)
+        x, y = pad + (i % cols) * span, 26 + (i // cols) * 40
+        b.text(label, x, y, "lb", 9, fill=acc[i % len(acc)])
+        vw = b.text(value, x, y + 20, "v", 18)
         fd = fmt_delta(delta)
         if fd:
-            b.text(fd[0], x + vw + 8, y + 26, f"d {fd[1]}", 12)
+            b.text(fd[0], x + vw + 5, y + 20, f"d {fd[1]}", 10)
         elif note:
-            b.text(note, x + vw + 8, y + 26, "n", 10)
+            b.text(note, x + vw + 5, y + 20, "n", 9)
     rows = (len(ts) + cols - 1) // cols
-    fy0 = 66 + rows * 62 + 4
+    grid_bottom = 26 + rows * 40 - 14
 
-    # fun facts
-    fx, keyw = pad, 112
-    fs = facts(d)
-    for i, (key, segs) in enumerate(fs):
-        y = fy0 + i * 19
-        c = acc[(i + 2) % len(acc)]
-        b.text(key, fx, y, "lb", 10, fill=c)
-        x = fx + keyw
-        for text, cls in segs:
-            x += b.text(text, x, y, "fv" if cls == "fv" else f"fv {cls}", 11) + 8
-
-    # weekly bars, beside the facts on wide, below them on narrow
+    # weekly bars: right of the grid on wide, under it on narrow
     if wide:
-        bx, bw, top = 400, W - pad - 400, fy0 + 4
+        bx, bw, top, base_y = pad + gw + 20, W - pad - (pad + gw + 20), 16, 70
     else:
-        bx, bw, top = pad, W - 2 * pad, fy0 + len(fs) * 19 + 22
-    base_y, ly = top + 52, top + 70
+        bx, bw, top, base_y = pad, W - 2 * pad, grid_bottom + 12, grid_bottom + 52
     weeks = d["weeks"][-53:]
     peak = max(weeks) or 1
-    b.text("weekly", bx, top - 10, "s", 11)
-    b.text(f"peak {peak}", bx + bw, top - 10, "s", 11, end=True)
     step = bw / len(weeks)
-    barw = step * 0.68
+    barw = step * 0.7
     bars = []
     for i, v in enumerate(weeks):
-        hgt = max((base_y - top) * v / peak, 2)
+        hgt = max((base_y - top) * v / peak, 1.5)
         now = i == len(weeks) - 1
-        delay = f"{1.0 + i * 0.01:.2f}s" + (", 2.80s" if now else "")
+        delay = f"{0.9 + i * 0.01:.2f}s" + (", 2.60s" if now else "")
         fill = t["now"] if now else "url(#bg)"
         bars.append(
             f'<rect class="{"b now" if now else "b"}" x="{bx + i * step:.1f}" y="{base_y - hgt:.1f}" width="{barw:.1f}" height="{hgt:.1f}" rx="1" fill="{fill}" style="animation-delay:{delay}"/>'
         )
+    b.text("weekly \u00b7 12 mo", bx, base_y + 14, "n", 9)
+    b.text(f"peak {peak}", bx + bw, base_y + 14, "n", 9, end=True)
 
-    # language bar + legend
-    segs, x = [], bx
+    # fun facts, centred: one line on wide, two on narrow
+    groups = fact_groups(d)
+    lines = [groups] if wide else [groups[:3], groups[3:]]
+    fy = H - 16 - 16 * (len(lines) - 1)
+    size, gap, sep = 10, 6, "  \u00b7  "
+    k = 0
+    for line in lines:
+        widths = [
+            sum(len(s) * size * CHAR for s, _ in g) + gap * (len(g) - 1) for g in line
+        ]
+        total = sum(widths) + len(sep) * size * CHAR * (len(line) - 1)
+        x = (W - total) / 2
+        for gi, g in enumerate(line):
+            if gi:
+                x += (
+                    b.text(sep.strip(), x + size * CHAR * 2, fy, "n", size)
+                    + size * CHAR * 4
+                )
+            for s, kind in g:
+                if kind == "k":
+                    fill, cls = acc[k % len(acc)], "fk"
+                    k += 1
+                else:
+                    fill, cls = None, "fv" if kind == "v" else f"fv {kind}"
+                x += b.text(s, x, fy, cls, size, fill=fill) + gap
+            x -= gap
+        fy += 16
+
+    # language bar along the bottom edge
+    segs, x = [], 1.0
     for i, (name, pct) in enumerate(d.get("langs", [])):
-        w = bw * pct / 100
+        w = (W - 2) * pct / 100
         c = LANG_COLORS.get(name, t["mu"])
         segs.append(
-            f'<rect class="lg" x="{x:.1f}" y="{ly}" width="{w + 0.5:.1f}" height="6" fill="{c}" style="animation-delay:{1.8 + i * 0.08:.2f}s"/>'
+            f'<rect class="lg" x="{x:.1f}" y="{H - 4}" width="{w + 0.5:.1f}" height="3" fill="{c}" style="animation-delay:{1.7 + i * 0.08:.2f}s"/>'
         )
         x += w
-    col = bw / 3
-    dots = []
-    for i, (name, pct) in enumerate(d.get("langs", [])):
-        lx, lyy = bx + (i % 3) * col, ly + 20 + (i // 3) * 16
-        dots.append(
-            f'<circle cx="{lx + 4:.1f}" cy="{lyy - 4}" r="3.5" fill="{LANG_COLORS.get(name, t["mu"])}"/>'
-        )
-        b.text(f"{name} {pct:.0f}%", lx + 12, lyy, "s", 11)
 
     g = t["grad"]
     stops = "".join(
@@ -448,19 +477,19 @@ def render(d: dict, dl: dict, base: dict | None, wide: bool, theme: str) -> str:
             f'<title id="t">{escape(title)}</title>',
             f'<desc id="d">{escape(desc)}</desc>',
             "<defs>",
-            f'<linearGradient id="hg" x1="0" y1="0" x2="1" y2="0">{stops}</linearGradient>',
             f'<linearGradient id="bg" gradientUnits="userSpaceOnUse" x1="{bx}" y1="0" x2="{bx + bw}" y2="0">{stops}</linearGradient>',
             f'<linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">{stops}</linearGradient>',
-            f'<clipPath id="lc"><rect x="{bx}" y="{ly}" width="{bw}" height="6" rx="3"/></clipPath>',
+            f'<clipPath id="card"><rect width="{W}" height="{H}" rx="8"/></clipPath>',
             "</defs>",
             b.css(),
-            f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="8" fill="{t["bg"]}" stroke="{t["line"]}"/>',
-            f'<rect x="1" y="1" width="{W - 2}" height="3" rx="1.5" fill="url(#edge)"/>',
-            *deco,
+            '<g clip-path="url(#card)">',
+            f'<rect width="{W}" height="{H}" fill="{t["bg"]}"/>',
+            f'<rect width="{W}" height="3" fill="url(#edge)"/>',
+            *segs,
+            "</g>",
+            f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="8" fill="none" stroke="{t["line"]}"/>',
             f'<line x1="{bx}" x2="{bx + bw}" y1="{base_y + 0.5}" y2="{base_y + 0.5}" stroke="{t["line"]}"/>',
             *bars,
-            f'<g clip-path="url(#lc)">{"".join(segs)}</g>',
-            *dots,
             *b.body,
             "</svg>",
             "",

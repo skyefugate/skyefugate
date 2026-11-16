@@ -10,6 +10,15 @@
 [![SecKC](https://img.shields.io/badge/@SecKC-B877D9?style=for-the-badge&logo=hackthebox&logoColor=white)](https://github.com/SecKC)
 ![Location](https://img.shields.io/badge/South_of_North-73BF69?style=for-the-badge&logo=googlemaps&logoColor=white)
 
+<!-- board:start -->
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/board-narrow-dark.svg?v=20261116">
+  <source media="(max-width: 600px)" srcset="assets/board-narrow-light.svg?v=20261116">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/board-wide-dark.svg?v=20261116">
+  <img src="assets/board-wide-light.svg?v=20261116" alt="Last 12 months: 56 contributions, 41 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers. Current streak 2 days, longest 3, active 15 of 365 days, 7 repos touched, 5 public repos, 5 languages used. Best day 2026-09-08 with 11. Busiest 90d: 2026-09-SecKC-AI-Talk · 17 commits. Peak hour: 11 pm · night owl (53%). Favourite day: Wed · 23% of the year. Weekends: 34% of contributions. Lines: +13.0k −1.0k. Joined: 2020 · 6 yrs ago. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%." width="760">
+</picture>
+<!-- board:end -->
+
 </div>
 
 ---
@@ -26,14 +35,3 @@
 <p align="center">
   <img src="https://skillicons.dev/icons?i=py,bash,aws,docker,linux,ansible,grafana,cloudflare,git,kotlin,js,html&perline=12" alt="tools"/>
 </p>
-
-<!-- board:start -->
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/board-narrow-dark.svg?v=20261116">
-  <source media="(max-width: 600px)" srcset="assets/board-narrow-light.svg?v=20261116">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/board-wide-dark.svg?v=20261116">
-  <img src="assets/board-wide-light.svg?v=20261116" alt="Last 12 months: 55 contributions, 40 commits, 6 pull requests, 0 reviews, 2 issues, 6 followers. Current streak 1 day, longest 3, active 14 of 365 days, 7 repos touched, 5 public repos, 5 languages used. Best day 2026-09-08 with 12. Busiest 90d: 2026-09-SecKC-AI-Talk · 17 commits. Peak hour: 11 pm · night owl (53%). Favourite day: Wed · 24% of the year. Weekends: 35% of contributions. Lines: +13.0k −1.0k. Joined: 2020 · 6 yrs ago. Languages: Python 48%, HTML 16%, CSS 15%, Shell 11%, JavaScript 10%." width="760">
-</picture>
-<!-- board:end -->
-
-<sub>Every number above is pulled from GitHub nightly. Nothing is typed in by hand, so if the work stops, the board goes quiet on its own.</sub>

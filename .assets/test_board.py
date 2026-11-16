@@ -141,20 +141,21 @@ class Render(unittest.TestCase):
         self.assertTrue(all(t.get("opacity") == "0" for t in junk))
         shown = {t.text for t in real}
         for want in (
-            "skyefugate",
             "55",
             "+1",
             "\u22121",
-            "3 d",
-            "best 4 d",
+            "3d",
+            "max 4",
             "14/365",
             "09-12",
-            "9 pm \u00b7 evening coder (46%)",
-            "Sat \u00b7 31% of the year",
+            "evening coder",
+            "9 pm",
+            "Sat",
+            "38%",
             "+8.8k",
             "\u2212802",
-            "2020 \u00b7 6 yrs ago",
-            "Python 48%",
+            "2026-09-SecKC-AI-Talk",
+            "2020",
         ):
             self.assertIn(want, shown)
         self.assertFalse(any("github" in s.lower() for s in shown))
