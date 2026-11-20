@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="268" viewBox="0 0 480 268" role="img" aria-labelledby="t d" aria-label="Last 12 months: 64 contributions (+1 since 2026-11-18), 48 commits (+0 since 2026-11-18), 6 pull requests (+0 since 2026-11-18), 0 reviews (+0 since 2026-11-18), 2 issues (+0 since 2026-11-18), 6 followers (+0 since 2026-11-18), 0 stars (+0 since 2026-11-18). Current streak 1 day, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%.">
-<title id="t">Skye Fugate, last 12 months, 2026-11-19</title>
-<desc id="d">Last 12 months: 64 contributions (+1 since 2026-11-18), 48 commits (+0 since 2026-11-18), 6 pull requests (+0 since 2026-11-18), 0 reviews (+0 since 2026-11-18), 2 issues (+0 since 2026-11-18), 6 followers (+0 since 2026-11-18), 0 stars (+0 since 2026-11-18). Current streak 1 day, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="268" viewBox="0 0 480 268" role="img" aria-labelledby="t d" aria-label="Last 12 months: 64 contributions (+0 since 2026-11-19), 48 commits (+0 since 2026-11-19), 6 pull requests (+0 since 2026-11-19), 0 reviews (+0 since 2026-11-19), 2 issues (+0 since 2026-11-19), 6 followers (+0 since 2026-11-19), 0 stars (+0 since 2026-11-19). Current streak 1 day, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%.">
+<title id="t">Skye Fugate, last 12 months, 2026-11-20</title>
+<desc id="d">Last 12 months: 64 contributions (+0 since 2026-11-19), 48 commits (+0 since 2026-11-19), 6 pull requests (+0 since 2026-11-19), 0 reviews (+0 since 2026-11-19), 2 issues (+0 since 2026-11-19), 6 followers (+0 since 2026-11-19), 0 stars (+0 since 2026-11-19). Current streak 1 day, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%.</desc>
 <defs>
 <linearGradient id="bg" gradientUnits="userSpaceOnUse" x1="20" y1="0" x2="460" y2="0"><stop offset="0" stop-color="#8AB8FF"/><stop offset="0.333333" stop-color="#5794F2"/><stop offset="0.666667" stop-color="#B877D9"/><stop offset="1" stop-color="#FF7383"/></linearGradient>
 <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8AB8FF"/><stop offset="0.333333" stop-color="#5794F2"/><stop offset="0.666667" stop-color="#B877D9"/><stop offset="1" stop-color="#FF7383"/></linearGradient>
@@ -124,21 +124,21 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.68s">6#</text>
 <text class="f v" x="20" y="46" opacity="0" style="animation-delay:0.73s">67</text>
 <text class="r v" x="20" y="46" style="animation-delay:0.78s">64</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.10s">70</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.15s">#5</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.20s">&gt;4</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.25s">$&amp;</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.30s">$=</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.35s">F0</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.40s">DA</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.45s">+E</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.50s">+1</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.55s">+2</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.60s">+4</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.65s">+*</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.70s">+7</text>
-<text class="f d up" x="46.6" y="46" opacity="0" style="animation-delay:0.75s">+2</text>
-<text class="r d up" x="46.6" y="46" style="animation-delay:0.80s">+1</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.10s">/%</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.15s">A%</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.20s">5/</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.25s">7=</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.30s">E&gt;</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.35s">EF</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.40s">C0</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.45s">±#</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.50s">±$</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.55s">±9</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.60s">±3</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.65s">±=</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.70s">±*</text>
+<text class="f d mu" x="46.6" y="46" opacity="0" style="animation-delay:0.75s">±0</text>
+<text class="r d mu" x="46.6" y="46" style="animation-delay:0.80s">±0</text>
 <text class="f lb" x="130" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.12s">+#+&amp;E&lt;1</text>
 <text class="f lb" x="130" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.17s">4&gt;062A=</text>
 <text class="f lb" x="130" y="26" fill="#B877D9" opacity="0" style="animation-delay:0.23s">C0BAB#C</text>
