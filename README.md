@@ -12,10 +12,10 @@
 
 <!-- board:start -->
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/board-narrow-dark.svg?v=20261121">
-  <source media="(max-width: 600px)" srcset="assets/board-narrow-light.svg?v=20261121">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/board-wide-dark.svg?v=20261121">
-  <img src="assets/board-wide-light.svg?v=20261121" alt="Last 12 months: 64 contributions (+0 since 2026-11-20), 48 commits (+0 since 2026-11-20), 6 pull requests (+0 since 2026-11-20), 0 reviews (+0 since 2026-11-20), 2 issues (+0 since 2026-11-20), 6 followers (+0 since 2026-11-20), 0 stars (+0 since 2026-11-20). Current streak 0 days, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%." width="760">
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/board-narrow-dark.svg?v=20261122">
+  <source media="(max-width: 600px)" srcset="assets/board-narrow-light.svg?v=20261122">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/board-wide-dark.svg?v=20261122">
+  <img src="assets/board-wide-light.svg?v=20261122" alt="Last 12 months: 64 contributions (+0 since 2026-11-21), 48 commits (+0 since 2026-11-21), 6 pull requests (+0 since 2026-11-21), 0 reviews (+0 since 2026-11-21), 2 issues (+0 since 2026-11-21), 6 followers (+0 since 2026-11-21), 0 stars (+0 since 2026-11-21). Current streak 0 days, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%." width="760">
 </picture>
 <!-- board:end -->
 
@@ -27,8 +27,8 @@
 
 <!-- terminal:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-dark.svg?v=20261121">
-  <img src="assets/terminal-light.svg?v=20261121" alt="What I work on (show interfaces) and my talks at SecDSM Dec 2025 and SecKC Sep 2026 (traceroute)" width="760">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-dark.svg?v=20261122">
+  <img src="assets/terminal-light.svg?v=20261122" alt="What I work on (show interfaces) and my talks at SecDSM Dec 2025 and SecKC Sep 2026 (traceroute)" width="760">
 </picture>
 <!-- terminal:end -->
 

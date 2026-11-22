@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="268" viewBox="0 0 480 268" role="img" aria-labelledby="t d" aria-label="Last 12 months: 64 contributions (+0 since 2026-11-20), 48 commits (+0 since 2026-11-20), 6 pull requests (+0 since 2026-11-20), 0 reviews (+0 since 2026-11-20), 2 issues (+0 since 2026-11-20), 6 followers (+0 since 2026-11-20), 0 stars (+0 since 2026-11-20). Current streak 0 days, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%.">
-<title id="t">Skye Fugate, last 12 months, 2026-11-21</title>
-<desc id="d">Last 12 months: 64 contributions (+0 since 2026-11-20), 48 commits (+0 since 2026-11-20), 6 pull requests (+0 since 2026-11-20), 0 reviews (+0 since 2026-11-20), 2 issues (+0 since 2026-11-20), 6 followers (+0 since 2026-11-20), 0 stars (+0 since 2026-11-20). Current streak 0 days, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="268" viewBox="0 0 480 268" role="img" aria-labelledby="t d" aria-label="Last 12 months: 64 contributions (+0 since 2026-11-21), 48 commits (+0 since 2026-11-21), 6 pull requests (+0 since 2026-11-21), 0 reviews (+0 since 2026-11-21), 2 issues (+0 since 2026-11-21), 6 followers (+0 since 2026-11-21), 0 stars (+0 since 2026-11-21). Current streak 0 days, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%.">
+<title id="t">Skye Fugate, last 12 months, 2026-11-22</title>
+<desc id="d">Last 12 months: 64 contributions (+0 since 2026-11-21), 48 commits (+0 since 2026-11-21), 6 pull requests (+0 since 2026-11-21), 0 reviews (+0 since 2026-11-21), 2 issues (+0 since 2026-11-21), 6 followers (+0 since 2026-11-21), 0 stars (+0 since 2026-11-21). Current streak 0 days, longest 3, active 16 of 365 days, 5 public repos, 5 languages. Ship It (share of my public PRs that merged): 78% · 7/9. Night Owl (peak commit hour, Central time): 11 pm · 53%. Touch Grass (longest stretch with no contributions): 151d off. Redemption Arc (biggest week after a quiet spell): 26 after 13w off. Languages: Python 68%, HTML 10%, CSS 9%, Shell 7%, JavaScript 6%.</desc>
 <defs>
 <linearGradient id="bg" gradientUnits="userSpaceOnUse" x1="20" y1="0" x2="460" y2="0"><stop offset="0" stop-color="#8AB8FF"/><stop offset="0.333333" stop-color="#5794F2"/><stop offset="0.666667" stop-color="#B877D9"/><stop offset="1" stop-color="#FF7383"/></linearGradient>
 <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8AB8FF"/><stop offset="0.333333" stop-color="#5794F2"/><stop offset="0.666667" stop-color="#B877D9"/><stop offset="1" stop-color="#FF7383"/></linearGradient>
@@ -42,12 +42,12 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <line x1="20" x2="460" y1="184.5" y2="184.5" stroke="#30363d"/>
 <line x1="20" x2="460" y1="210" y2="210" stroke="#30363d" stroke-dasharray="2 3"/>
 <rect class="b" x="20.0" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.90s"/>
-<rect class="b" x="28.3" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.91s"/>
-<rect class="b" x="36.6" y="174.8" width="5.8" height="9.2" rx="1" fill="url(#bg)" style="animation-delay:0.92s"/>
-<rect class="b" x="44.9" y="177.8" width="5.8" height="6.2" rx="1" fill="url(#bg)" style="animation-delay:0.93s"/>
+<rect class="b" x="28.3" y="174.8" width="5.8" height="9.2" rx="1" fill="url(#bg)" style="animation-delay:0.91s"/>
+<rect class="b" x="36.6" y="177.8" width="5.8" height="6.2" rx="1" fill="url(#bg)" style="animation-delay:0.92s"/>
+<rect class="b" x="44.9" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.93s"/>
 <rect class="b" x="53.2" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.94s"/>
-<rect class="b" x="61.5" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.95s"/>
-<rect class="b" x="69.8" y="173.2" width="5.8" height="10.8" rx="1" fill="url(#bg)" style="animation-delay:0.96s"/>
+<rect class="b" x="61.5" y="173.2" width="5.8" height="10.8" rx="1" fill="url(#bg)" style="animation-delay:0.95s"/>
+<rect class="b" x="69.8" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.96s"/>
 <rect class="b" x="78.1" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.97s"/>
 <rect class="b" x="86.4" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.98s"/>
 <rect class="b" x="94.7" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:0.99s"/>
@@ -82,18 +82,18 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <rect class="b" x="335.5" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.28s"/>
 <rect class="b" x="343.8" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.29s"/>
 <rect class="b" x="352.1" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.30s"/>
-<rect class="b" x="360.4" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.31s"/>
-<rect class="b" x="368.7" y="144.0" width="5.8" height="40.0" rx="1" fill="url(#bg)" style="animation-delay:1.32s"/>
+<rect class="b" x="360.4" y="144.0" width="5.8" height="40.0" rx="1" fill="url(#bg)" style="animation-delay:1.31s"/>
+<rect class="b" x="368.7" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.32s"/>
 <rect class="b" x="377.0" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.33s"/>
 <rect class="b" x="385.3" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.34s"/>
 <rect class="b" x="393.6" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.35s"/>
 <rect class="b" x="401.9" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.36s"/>
 <rect class="b" x="410.2" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.37s"/>
 <rect class="b" x="418.5" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.38s"/>
-<rect class="b" x="426.8" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.39s"/>
-<rect class="b" x="435.1" y="179.4" width="5.8" height="4.6" rx="1" fill="url(#bg)" style="animation-delay:1.40s"/>
-<rect class="b" x="443.4" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.41s"/>
-<rect class="b now" x="451.7" y="162.5" width="5.8" height="21.5" rx="1" fill="#FF9830" style="animation-delay:1.42s, 2.60s"/>
+<rect class="b" x="426.8" y="179.4" width="5.8" height="4.6" rx="1" fill="url(#bg)" style="animation-delay:1.39s"/>
+<rect class="b" x="435.1" y="182.5" width="5.8" height="1.5" rx="1" fill="url(#bg)" style="animation-delay:1.40s"/>
+<rect class="b" x="443.4" y="162.5" width="5.8" height="21.5" rx="1" fill="url(#bg)" style="animation-delay:1.41s"/>
+<rect class="b now" x="451.7" y="182.5" width="5.8" height="1.5" rx="1" fill="#FF9830" style="animation-delay:1.42s, 2.60s"/>
 <text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.05s">13/=051&lt;</text>
 <text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.10s">9B1+697F</text>
 <text class="f lb" x="20" y="26" fill="#5794F2" opacity="0" style="animation-delay:0.15s">C3=1$C$3</text>
